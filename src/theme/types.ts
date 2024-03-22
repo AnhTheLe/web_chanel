@@ -1,4 +1,4 @@
-import { ThemeColorsModel } from "@mui/material/styles/createPalette";
+import { ThemeColorsModel } from '@mui/material/styles/createPalette';
 
 export type ThemeModel = {
   color: ThemeColorsModel;

@@ -2,6 +2,7 @@ import { Navigate, Outlet, useRoutes } from 'react-router-dom';
 
 import RegisterLayout from 'src/layouts/RegisterLayout';
 import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage/HomePage';
 
 const isAuthenticated = true;
 function ProtectedRoute() {
@@ -17,16 +18,20 @@ export default function useRouteElements() {
   const routeElements = useRoutes([
     {
       path: '/',
-      index: true,
-      element: <MainLayout></MainLayout>
+      element: <Navigate to={`/home`} />
     },
     {
       path: '',
-      element: <ProtectedRoute />,
+      element: <Navigate to={`/home`} />
+    },
+    {
+      path: '',
+      element: <MainLayout></MainLayout>,
       children: [
         {
-          path: 'profile',
-          element: <MainLayout></MainLayout>
+          index: true,
+          path: '/home',
+          element: <HomePage />
         }
       ]
     },

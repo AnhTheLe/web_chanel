@@ -1,11 +1,7 @@
 import { Button } from '@mui/material';
 import { makeStyles, styled } from '@mui/material/styles';
 
-export const Root = styled('div')(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'row',
-  height: '64px'
-}));
+export const Root = styled('header')(({ theme }) => ({}));
 
 export const NavButton = styled(Button)(({ theme }) => ({
   color: '#333333',

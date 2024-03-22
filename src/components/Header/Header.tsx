@@ -1,22 +1,44 @@
-import { Box, IconButton } from '@mui/material';
+import { Box, Grid, Icon, IconButton } from '@mui/material';
 import { Root, NavButton } from './Header.style';
 import logo from 'src/assets/img/logo.png';
 import SearchIcon from 'src/assets/svg/SearchIcon';
 import UserIcon from 'src/assets/svg/UserIcon';
+import CartIcon from 'src/assets/svg/CartIcon';
 
 export default function Header() {
   return (
-    <Root>
-      <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+    <Grid
+      container
+      direction='row'
+      justifyContent='center'
+      alignItems='center'
+      sx={{
+        borderBottom: 'solid thin #E5E5E5'
+      }}
+    >
+      <Grid item xs={2}>
         <img src={logo} alt='' />
+      </Grid>
+      <Grid item xs={4} sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }} justifyContent={'center'}>
         <NavButton variant='text' size='large' disableRipple>
           TRANG CHỦ
         </NavButton>
-        <NavButton variant='text'>SẢN PHẨM</NavButton>
-        <NavButton variant='text'>BLOG</NavButton>
-        <NavButton variant='text'>GIỚI THIỆU</NavButton>
-      </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+        <NavButton variant='text' disableRipple>
+          SẢN PHẨM
+        </NavButton>
+        <NavButton variant='text' disableRipple>
+          BLOG
+        </NavButton>
+        <NavButton variant='text' disableRipple>
+          GIỚI THIỆU
+        </NavButton>
+      </Grid>
+      <Grid
+        item
+        xs={2}
+        sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+        justifyContent={'flex-end'}
+      >
         <IconButton
           sx={{
             '&:hover': {
@@ -35,7 +57,10 @@ export default function Header() {
             }}
           ></UserIcon>
         </IconButton>
-      </Box>
-    </Root>
+        <IconButton>
+          <CartIcon></CartIcon>
+        </IconButton>
+      </Grid>
+    </Grid>
   );
 }
