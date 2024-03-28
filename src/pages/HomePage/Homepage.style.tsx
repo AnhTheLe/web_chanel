@@ -5,5 +5,8 @@ export const Img = styled('img')(({ theme }) => ({
   borderStyle: 'none',
   maxWidth: '100%',
   height: 'auto',
-  objectFit: 'cover'
+  objectFit: 'cover',
+  '@media (max-width: 1200px)': {
+    display: 'none'
+  }
 }));

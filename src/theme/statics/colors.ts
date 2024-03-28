@@ -75,6 +75,23 @@ const yellow: ColorVariantModel = {
   }
 };
 
+const pinkOrange: ColorVariantModel = {
+  110: '#FF7F00',
+  100: '#FF8F06',
+  80: '#FF9F38',
+  60: '#FFAF6A',
+  50: '#FFBF9B',
+  40: '#FFCFCD',
+  20: '#FFDADA',
+  10: '#FFE7E7',
+  5: '#fff2eb',
+  gradient: {
+    from: '#FF8F06',
+    to: '#FF9F38'
+  }
+
+};
+
 const red: ColorVariantModel = {
   110: '#E83232',
   100: '#EB4444',
@@ -114,7 +131,8 @@ const notifyText = {
   danger: '#EE4747',
   warning: '#E49C06',
   success: '#0DB473',
-  info: '#5364FE'
+  info: '#5364FE',
+  default: '#333333'
 };
 
 const colors = {
@@ -123,6 +141,7 @@ const colors = {
   primary,
   secondary,
   yellow,
+  pinkOrange,
   red,
   text,
   background,
