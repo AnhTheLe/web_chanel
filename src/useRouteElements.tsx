@@ -3,14 +3,17 @@ import { Navigate, Outlet, useRoutes } from 'react-router-dom';
 import RegisterLayout from 'src/layouts/RegisterLayout';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage/HomePage';
+import Products from './pages/Products/Products';
+import Blogs from './pages/Blogs/Blogs';
+import Login from './pages/Login/Login';
 
 const isAuthenticated = true;
 function ProtectedRoute() {
-  return isAuthenticated ? <Outlet /> : <Navigate to='/login' />;
+  return isAuthenticated ? <MainLayout></MainLayout> : <Navigate to='/login' />;
 }
 
 function RejectedRoute() {
-  return !isAuthenticated ? <Outlet /> : <Navigate to='/' />;
+  return !isAuthenticated ? <MainLayout></MainLayout> : <Navigate to='/' />;
 }
 
 export default function useRouteElements() {
@@ -32,16 +35,28 @@ export default function useRouteElements() {
           index: true,
           path: '/home',
           element: <HomePage />
+        },
+        {
+          path: '/products',
+          element: <Products />
+        },
+        {
+          path: '/blogs',
+          element: <Blogs />
+        },
+        {
+          path: '/about',
+          element: <div>About</div>
         }
       ]
     },
     {
       path: '',
-      element: <RejectedRoute />,
+      element: <ProtectedRoute />,
       children: [
         {
-          path: '/login',
-          element: <RegisterLayout></RegisterLayout>
+          path: '/account/login',
+          element: <Login></Login>
         },
         {
           path: '/register',

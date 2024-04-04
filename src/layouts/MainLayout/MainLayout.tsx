@@ -8,10 +8,10 @@ interface Props {
 }
 export default function MainLayout({ children }: Props) {
   return (
-    <div>
+    <>
       <Header />
       <Outlet />
       <Footer />
-    </div>
+    </>
   );
 }
