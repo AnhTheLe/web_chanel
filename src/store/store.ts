@@ -30,7 +30,7 @@ const reducers = combineReducers({
 const rootReducerConfig = getPersistConfig({
   key: 'sapo-pos-v3',
   storage,
-  whitelist: [],
+  whitelist: ['authContext'],
   rootReducer: reducers
 });
 

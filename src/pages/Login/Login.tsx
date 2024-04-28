@@ -1,20 +1,22 @@
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { schema, Schema } from 'src/utils/rules';
 import { useMutation } from '@tanstack/react-query';
 import Input from 'src/components/Input';
 import Button from 'src/components/Button';
-import { Helmet } from 'react-helmet-async';
 import authApi from 'src/api/auth.api';
 import { isAxiosUnprocessableEntityError } from 'src/utils/utils';
 import { ErrorResponse } from 'src/types/utils.type';
+import { useContext } from 'react';
+import { AppContext } from 'src/contexts/app.context';
 
 type FormData = Pick<Schema, 'email' | 'password'>;
 const loginSchema = schema.pick(['email', 'password']);
 
 const Login = () => {
-  // const { setIsAuthenticated, setProfile } = useContext(AppContext);
+  const { setIsAuthenticated, setProfile } = useContext(AppContext);
+
   const navigate = useNavigate();
   const {
     register,
@@ -31,8 +33,8 @@ const Login = () => {
   const onSubmit = handleSubmit((data) => {
     loginMutation.mutate(data, {
       onSuccess: (data) => {
-        // setIsAuthenticated(true);
-        // setProfile(data.data.data.user);
+        setIsAuthenticated(true);
+        setProfile(data.data.data.user);
         navigate('/');
       },
       onError: (error) => {
@@ -92,7 +94,7 @@ const Login = () => {
               </div>
               <div className='mt-8 flex items-center justify-center'>
                 <span className='text-gray-400'>Bạn chưa có tài khoản?</span>
-                <Link className='ml-1 text-red-400' to='/register'>
+                <Link className='ml-1 text-red-400' to='/account/sign-in'>
                   Đăng ký
                 </Link>
               </div>

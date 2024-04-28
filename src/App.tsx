@@ -5,22 +5,26 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Provider } from 'react-redux';
 import { storeProvider } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
-import { Suspense } from 'react';
+import { Suspense, useContext, useEffect } from 'react';
 import { createAppTheme } from './theme';
+import { AppContext, AppProvider } from './contexts/app.context';
 
 function App() {
   const routeElements = useRouteElements();
   const theme = createAppTheme(storeProvider.store.getState().theme);
+
   return (
     <ThemeProvider theme={theme}>
-      <Provider store={storeProvider.store}>
-        <PersistGate loading={null} persistor={storeProvider.persistor}>
-          <Suspense>
-            {routeElements}
-            <ToastContainer />
-          </Suspense>
-        </PersistGate>
-      </Provider>
+      <AppProvider>
+        <Provider store={storeProvider.store}>
+          <PersistGate loading={null} persistor={storeProvider.persistor}>
+            <Suspense>
+              {routeElements}
+              <ToastContainer />
+            </Suspense>
+          </PersistGate>
+        </Provider>
+      </AppProvider>
     </ThemeProvider>
   );
 }
