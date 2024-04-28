@@ -14,9 +14,39 @@ import SectionReview from './components/SectionReview/SectionReview';
 import greenBackground from 'src/assets/img/HomePage/greenBackground.png';
 import productDiscount from 'src/assets/img/HomePage/productDiscount.png';
 import ListSlideProducts from './components/ListSlideProducts/ListSlideProducts';
+import { useQuery } from '@tanstack/react-query';
+import productApi from 'src/api/product.api';
+import { ProductFilter } from 'src/types/product.type';
 
 const HomePage = () => {
   const handleOnclickDiscount = () => {};
+
+  const top10NewProducts: ProductFilter = { page: 1, size: 10 };
+
+  const { data: listVariants } = useQuery({
+    queryKey: ['listVariants', top10NewProducts],
+    queryFn: () => {
+      return productApi.getListVariants(top10NewProducts);
+    }
+  });
+
+  const top10NewVariants = listVariants?.data.data;
+  console.log('top10NewVariants', top10NewVariants);
+
+  const { data: topDiscountVariant } = useQuery({
+    queryKey: ['topDiscountVariant'],
+    queryFn: productApi.getTopDiscountVariant
+  });
+
+  const { data: topSaleVariant } = useQuery({
+    queryKey: ['topSaleVariant'],
+    queryFn: productApi.getTopSaleVariant
+  });
+
+  const topSaleVariants = topSaleVariant?.data.data?.map((item) => item.variant) ?? [];
+
+  const topDiscountVariants = topDiscountVariant?.data.data;
+
   return (
     <Box sx={{ margin: '36px 0' }}>
       <Grid container spacing={2} justifyContent='center'>
@@ -99,7 +129,7 @@ const HomePage = () => {
       {/* List discount product */}
       <Grid margin={'36px 0px'} container justifyContent='center' wrap='wrap'>
         <Grid item xs={11} sm={10} md={8} lg={4}>
-          <ListSlideProducts></ListSlideProducts>
+          <ListSlideProducts listVariants={topDiscountVariants} fixQuantitySlides slidesPerView={2}></ListSlideProducts>
         </Grid>
         <Grid item xs={11} sm={10} md={8} lg={4} paddingLeft={'24px'}>
           <Img src={productDiscount} alt='' />
@@ -128,6 +158,13 @@ const HomePage = () => {
         </Grid>
       </Grid>
 
+      {/* top 10 new  product */}
+      <Grid margin={'36px 0px'} container justifyContent='center' wrap='wrap'>
+        <Grid item xs={11} sm={10} md={8}>
+          <ListSlideProducts listVariants={top10NewVariants} slidesPerView={4}></ListSlideProducts>
+        </Grid>
+      </Grid>
+
       {/* hot sale */}
       <Grid margin={'36px 0px'} container justifyContent='center' wrap='wrap'>
         <Grid
@@ -148,6 +185,13 @@ const HomePage = () => {
           <Typography color={'#2e747e'} fontSize={24} fontWeight={700} onClick={handleOnclickDiscount}>
             SẢN PHẨM BÁN CHẠY
           </Typography>
+        </Grid>
+      </Grid>
+
+      {/* top 10 new  product */}
+      <Grid margin={'36px 0px'} container justifyContent='center' wrap='wrap'>
+        <Grid item xs={11} sm={10} md={8}>
+          <ListSlideProducts listVariants={topSaleVariants} slidesPerView={4}></ListSlideProducts>
         </Grid>
       </Grid>
 

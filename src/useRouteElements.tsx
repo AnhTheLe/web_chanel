@@ -6,13 +6,20 @@ import HomePage from './pages/HomePage/HomePage';
 import Products from './pages/Products/Products';
 import Blogs from './pages/Blogs/Blogs';
 import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import { useContext } from 'react';
+import { AppContext } from './contexts/app.context';
+import Profile from './pages/User/pages/Profile';
 
-const isAuthenticated = true;
+// const isAuthenticated = true;
 function ProtectedRoute() {
+  const { isAuthenticated } = useContext(AppContext);
   return isAuthenticated ? <MainLayout></MainLayout> : <Navigate to='/login' />;
 }
 
 function RejectedRoute() {
+  const { isAuthenticated } = useContext(AppContext);
+
   return !isAuthenticated ? <MainLayout></MainLayout> : <Navigate to='/' />;
 }
 
@@ -27,9 +34,46 @@ export default function useRouteElements() {
       path: '',
       element: <Navigate to={`/home`} />
     },
+    // {
+    //   path: '',
+    //   element: <MainLayout></MainLayout>,
+    //   children: [
+    //     {
+    //       index: true,
+    //       path: '/home',
+    //       element: <HomePage />
+    //     },
+    //     {
+    //       path: '/products',
+    //       element: <Products />
+    //     },
+    //     {
+    //       path: '/blogs',
+    //       element: <Blogs />
+    //     },
+    //     {
+    //       path: '/about',
+    //       element: <div>About</div>
+    //     }
+    //   ]
+    // },
     {
       path: '',
-      element: <MainLayout></MainLayout>,
+      element: <RejectedRoute />,
+      children: [
+        {
+          path: '/account/login',
+          element: <Login></Login>
+        },
+        {
+          path: '/account/sign-in',
+          element: <Register></Register>
+        }
+      ]
+    },
+    {
+      path: '',
+      element: <ProtectedRoute />,
       children: [
         {
           index: true,
@@ -47,20 +91,10 @@ export default function useRouteElements() {
         {
           path: '/about',
           element: <div>About</div>
-        }
-      ]
-    },
-    {
-      path: '',
-      element: <ProtectedRoute />,
-      children: [
-        {
-          path: '/account/login',
-          element: <Login></Login>
         },
         {
-          path: '/register',
-          element: <RegisterLayout></RegisterLayout>
+          path: 'profile',
+          element: <Profile />
         }
       ]
     }

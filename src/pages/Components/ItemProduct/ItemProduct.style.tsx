@@ -1,4 +1,5 @@
 import { Box, styled } from '@mui/material';
+import { cursorTo } from 'readline';
 
 const PREFIX = 'MyCard';
 export const classes = {
@@ -6,6 +7,11 @@ export const classes = {
   rootImg: `${PREFIX}-rootImg`,
   searchIcon: `${PREFIX}-searchIcon`,
   button: `${PREFIX}-button`,
+  buttonBuyNow: `${PREFIX}-buttonBuyNow`,
+  buttonAddToCart: `${PREFIX}-buttonAddToCart`,
+  buttonWrap: `${PREFIX}-buttonWrap`,
+  comparePrice: `${PREFIX}-comparePrice`,
+  variantNameHover: `${PREFIX}-variantNameHover`,
   img: `${PREFIX}-img`
 };
 export const Root = styled(Box)(({ theme }) => ({
@@ -46,7 +52,13 @@ export const Root = styled(Box)(({ theme }) => ({
         // }
         opacity: 0.5
       },
-      [`& .${classes.button}`]: {
+      [`& .${classes.buttonAddToCart}`]: {
+        opacity: 1
+      },
+      [`& .${classes.buttonBuyNow}`]: {
+        opacity: 1
+      },
+      [`& .${classes.buttonWrap}`]: {
         opacity: 1
       },
       [`& .${classes.searchIcon}`]: {
@@ -87,21 +99,73 @@ export const Root = styled(Box)(({ theme }) => ({
     alignItems: 'center',
     borderRadius: 8
   },
-  [`& .${classes.button}`]: {
-    textAlign: 'center',
-    color: '#a05139',
-    fontSize: 16,
+  [`& .${classes.buttonWrap}`]: {
     position: 'absolute',
     opacity: 0,
-    bottom: '10x',
     zIndex: 10,
-    left: '10px',
-    width: 'calc(100% - 20px)',
-    backgroundColor: '#ffb9a4',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: '100%',
+    height: 36,
     transform: 'translateY(180px)',
-    transition: 'all 0.5s',
+    transition: 'all 0.5s'
+  },
+  [`& .${classes.buttonBuyNow}`]: {
+    textAlign: 'center',
+    color: '#a05139',
+    fontSize: 14,
+    // position: 'absolute',
+    opacity: 0,
+    // bottom: '10x',
+    zIndex: 10,
+    // left: '10px',
+    width: '80%',
+    height: '100%',
+    margin: '0 8px',
+    backgroundColor: '#ffb9a4',
+    // transform: 'translateY(180px)',
+    // transition: 'all 0.5s',
     '&:hover': {
       backgroundColor: '#fff4f0'
+    }
+  },
+  [`& .${classes.buttonAddToCart}`]: {
+    textAlign: 'center',
+    color: '#a05139',
+    fontSize: 14,
+    // position: 'absolute',
+    opacity: 0,
+    // bottom: '10x',
+    zIndex: 10,
+    width: '20%',
+    margin: '0 8px',
+    height: '100%',
+    backgroundColor: '#fff4f0',
+
+    // transform: 'translateY(180px)',
+    // transition: 'all 0.5s',
+    '&:hover': {
+      backgroundColor: '#ffb9a4'
+    }
+  }
+}));
+
+export const NameAndPriceWrap = styled(Box)(({ theme }) => ({
+  [`& .${classes.comparePrice}`]: {
+    fontSize: '13px',
+    lineHeight: '17px',
+    fontWeight: 300,
+    display: 'inline-block',
+    textDecoration: 'line-through',
+    color: '#8C8C8C',
+    marginRight: '10px'
+  },
+  [`& .${classes.variantNameHover}`]: {
+    '&:hover': {
+      color: '#a05139 !important',
+      cursor: 'pointer'
     }
   }
 }));

@@ -17,25 +17,35 @@ import { Box, Grid, Typography } from '@mui/material';
 import ArrowLeftIcon from 'src/assets/svg/ArrowLeftIcon';
 import ArrowRightIcon from 'src/assets/svg/ArrowRightIcon';
 import ItemProduct from 'src/pages/Components/ItemProduct/ItemProduct';
-interface ListSlideProductProps {}
-const ListSlideProducts = () => {
+import { Variant } from 'src/types/product.type';
+interface ListSlideProductProps {
+  listVariants?: Variant[];
+  slidesPerView?: number;
+  fixQuantitySlides?: boolean;
+}
+const ListSlideProducts = (props: ListSlideProductProps) => {
+  const { listVariants, slidesPerView, fixQuantitySlides } = props;
   return (
     <Box display={'flex'} justifyContent={'center'}>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={slidesPerView ?? 2}
         centeredSlides={false}
         loop={true}
         breakpoints={{
-          1024: {
-            slidesPerView: 3,
+          600: {
+            slidesPerView: 2,
             spaceBetween: 10
           },
+          900: {
+            slidesPerView: 3,
+            spaceBetween: 5
+          },
           1200: {
-            slidesPerView: 1,
+            slidesPerView: fixQuantitySlides ? slidesPerView ?? 3 : 3,
             spaceBetween: 5
           },
           1400: {
-            slidesPerView: 2,
+            slidesPerView: fixQuantitySlides ? slidesPerView ?? 4 : 4,
             spaceBetween: 5
           }
         }}
@@ -47,16 +57,13 @@ const ListSlideProducts = () => {
         className='listProductSwiper'
         style={{ marginBottom: '26px' }}
       >
-        <SwiperSlide>
-          <ItemProduct />
-        </SwiperSlide>
+        {listVariants &&
+          listVariants.map((child, index) => (
+            <SwiperSlide key={index}>
+              <ItemProduct key={index} variant={child} />
+            </SwiperSlide>
+          ))}
 
-        <SwiperSlide>
-          <ItemProduct />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ItemProduct />
-        </SwiperSlide>
         <a className='swiper-button-prev1'>
           <ArrowLeftIcon htmlColor='#A3A8AF'></ArrowLeftIcon>
         </a>

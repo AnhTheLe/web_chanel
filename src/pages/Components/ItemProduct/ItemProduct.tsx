@@ -1,9 +1,20 @@
 import { Box, Button, Typography } from '@mui/material';
-import lips from 'src/assets/img/test/lips.png';
-import { Root, classes } from './ItemProduct.style';
+import { NameAndPriceWrap, Root, classes } from './ItemProduct.style';
 import SearchIcon from 'src/assets/svg/SearchIcon';
+import noImage from 'src/assets/img/noImage.png';
+import bagCart from 'src/assets/img/bagCart.gif';
+import { Variant } from 'src/types/product.type';
+import TypographyCus from 'src/components/PosTypography/TypographyCus';
+import BagCartIcon from 'src/assets/svg/BagCartIcon';
+import { formatPriceWithVNDCurrency } from 'src/utils/priceUtils';
 
-const ItemProduct = () => {
+interface ItemProductProps {
+  variant: Variant;
+}
+
+const ItemProduct = (props: ItemProductProps) => {
+  const { variant } = props;
+  console.log('noImage', noImage);
   return (
     <form
       style={{
@@ -16,23 +27,48 @@ const ItemProduct = () => {
     >
       <Root className={classes.rootImg}>
         <Box className={classes.img}>
-          <img src={lips} alt='' className='lazyLoad loaded' />
+          <img src={variant.image ?? noImage} alt='' className='lazyLoad loaded' />
         </Box>
 
         <Box className={classes.searchIcon}>
           <SearchIcon />
         </Box>
-        <Button className={classes.button}>
-          <Typography fontSize={16} fontWeight={700}>
-            Chi tiết
-          </Typography>
-        </Button>
+        <Box className={classes.buttonWrap}>
+          <Button className={classes.buttonBuyNow}>
+            <Typography fontSize={14} fontWeight={550}>
+              Mua ngay
+            </Typography>
+          </Button>
+          <Button className={classes.buttonAddToCart}>
+            <BagCartIcon></BagCartIcon>
+          </Button>
+        </Box>
       </Root>
-      <Box display={'flex'} justifyContent={'center'} maxWidth={'100%'}>
-        <Typography fontSize={14} fontWeight={500}>
-          Xịt khoáng Avena
-        </Typography>
-      </Box>
+      <NameAndPriceWrap
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        maxWidth={'100%'}
+      >
+        <TypographyCus
+          fontSize={14}
+          fontWeight={'regular'}
+          style={{ maxWidth: 220 }}
+          noWrap
+          className={classes.variantNameHover}
+        >
+          {variant.name}
+        </TypographyCus>
+        <Box display={'flex'} alignItems={'center'} paddingTop={'8px'}>
+          {variant.discountedPrice !== variant.retailPrice && (
+            <span className={classes.comparePrice}>{formatPriceWithVNDCurrency(variant.retailPrice)}</span>
+          )}
+          <TypographyCus fontSize={14} fontWeight={'regular'}>
+            {formatPriceWithVNDCurrency(variant.discountedPrice)}
+          </TypographyCus>
+        </Box>
+      </NameAndPriceWrap>
     </form>
   );
 };
