@@ -8,6 +8,7 @@ export interface SuccessResponse<Data> {
   data: Data;
 }
 export interface ErrorResponse<Data> {
+  responseCode: number;
   message: string;
   data?: Data;
 }

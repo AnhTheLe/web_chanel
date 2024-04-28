@@ -3,6 +3,9 @@ import * as yup from 'yup';
 
 type Rules = { [key in 'email' | 'password' | 'confirm_password']?: RegisterOptions };
 
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getRules = (getValues?: UseFormGetValues<any>): Rules => ({
   email: {
@@ -75,6 +78,8 @@ const handleConfirmPasswordYup = (refString: string) => {
 };
 
 export const schema = yup.object({
+  firstName: yup.string().required('Tên là bắt buộc').max(160, 'Độ dài tối đa là 160 ký tự'),
+  lastName: yup.string().required('Họ là bắt buộc').max(160, 'Độ dài tối đa là 160 ký tự'),
   email: yup
     .string()
     .required('Email là bắt buộc')
@@ -87,6 +92,7 @@ export const schema = yup.object({
     .min(6, 'Độ dài từ 6 - 160 ký tự')
     .max(160, 'Độ dài từ 6 - 160 ký tự'),
   confirm_password: handleConfirmPasswordYup('password'),
+  phone: yup.string().required('Số điện thoại là bắt buộc').matches(phoneRegExp, 'Phone number is not valid'),
   price_min: yup.string().test({
     name: 'price-not-allowed',
     message: 'Giá không phù hợp',
