@@ -2,19 +2,50 @@ import { Box, Button, Typography } from '@mui/material';
 import { NameAndPriceWrap, Root, classes } from './ItemProduct.style';
 import SearchIcon from 'src/assets/svg/SearchIcon';
 import noImage from 'src/assets/img/noImage.png';
-import bagCart from 'src/assets/img/bagCart.gif';
 import { Variant } from 'src/types/product.type';
 import TypographyCus from 'src/components/PosTypography/TypographyCus';
 import BagCartIcon from 'src/assets/svg/BagCartIcon';
 import { formatPriceWithVNDCurrency } from 'src/utils/priceUtils';
+import useModal from 'src/pages/HomePage/hocs/modal/useModal';
+import CartDialog from 'src/pages/HomePage/components/DialogCart/CartDialog';
+import { useState } from 'react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import purchaseApi from 'src/api/shoppingCart.api';
+import { toast } from 'react-toastify';
 
 interface ItemProductProps {
   variant: Variant;
+  onClickBagCart?: (variant: Variant) => void;
 }
 
 const ItemProduct = (props: ItemProductProps) => {
-  const { variant } = props;
-  console.log('noImage', noImage);
+  const { variant, onClickBagCart } = props;
+  const { openModal } = useModal();
+  const [openCartDialog, setOpenCartDialog] = useState(false);
+  const queryClient = useQueryClient();
+
+  const addToCartMutation = useMutation({
+    mutationFn: () => {
+      return purchaseApi.addToCart({ productId: variant.id, quantity: 1 });
+    }
+  });
+
+  const handleOnclickBagCart = () => {
+    if (onClickBagCart) {
+      onClickBagCart(variant);
+    }
+
+    addToCartMutation.mutate(onClickBagCart && onClickBagCart(variant), {
+      onSuccess: (data) => {
+        toast.success(data.data.message, { autoClose: 1000 });
+        queryClient.invalidateQueries({ queryKey: ['purchases'] });
+        setOpenCartDialog(true);
+      },
+      onError: (error) => {
+        toast.error('Có lỗi khi thêm sản phẩm vào đơn hàng', { autoClose: 1000 });
+      }
+    });
+  };
   return (
     <form
       style={{
@@ -39,7 +70,7 @@ const ItemProduct = (props: ItemProductProps) => {
               Mua ngay
             </Typography>
           </Button>
-          <Button className={classes.buttonAddToCart}>
+          <Button className={classes.buttonAddToCart} onClick={handleOnclickBagCart}>
             <BagCartIcon></BagCartIcon>
           </Button>
         </Box>
@@ -69,6 +100,7 @@ const ItemProduct = (props: ItemProductProps) => {
           </TypographyCus>
         </Box>
       </NameAndPriceWrap>
+      <CartDialog isOpenModal={openCartDialog} setOpen={setOpenCartDialog} />
     </form>
   );
 };

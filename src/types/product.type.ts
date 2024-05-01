@@ -24,6 +24,7 @@ export type Variant = {
   importPrice: number;
   retailPrice: number;
   wholesalePrice: number;
+  quantity: number;
   image: string;
   sku: string;
   barcode: string;

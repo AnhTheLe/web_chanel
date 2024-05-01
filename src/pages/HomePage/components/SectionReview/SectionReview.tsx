@@ -24,7 +24,6 @@ import image2 from 'src/assets/img/customer/image2.png';
 import image3 from 'src/assets/img/customer/image3.png';
 import image4 from 'src/assets/img/customer/image4.png';
 import ItemReview from './Components/ItemReview';
-import { useEffect } from 'react';
 const SectionReview = () => {
   const listData = [
     {

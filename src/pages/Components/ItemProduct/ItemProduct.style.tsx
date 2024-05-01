@@ -1,7 +1,7 @@
 import { Box, styled } from '@mui/material';
 import { cursorTo } from 'readline';
 
-const PREFIX = 'MyCard';
+const PREFIX = 'ItemProduct';
 export const classes = {
   root: `${PREFIX}-root`,
   rootImg: `${PREFIX}-rootImg`,

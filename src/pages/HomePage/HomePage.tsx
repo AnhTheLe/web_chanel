@@ -17,11 +17,15 @@ import ListSlideProducts from './components/ListSlideProducts/ListSlideProducts'
 import { useQuery } from '@tanstack/react-query';
 import productApi from 'src/api/product.api';
 import { ProductFilter } from 'src/types/product.type';
+import CartDialog from './components/DialogCart/CartDialog';
+import { useState } from 'react';
 
 const HomePage = () => {
   const handleOnclickDiscount = () => {};
 
   const top10NewProducts: ProductFilter = { page: 1, size: 10 };
+
+  const [openCartDialog, setOpenCartDialog] = useState(false);
 
   const { data: listVariants } = useQuery({
     queryKey: ['listVariants', top10NewProducts],
@@ -46,6 +50,10 @@ const HomePage = () => {
   const topSaleVariants = topSaleVariant?.data.data?.map((item) => item.variant) ?? [];
 
   const topDiscountVariants = topDiscountVariant?.data.data;
+
+  const handleConfirm = () => {
+    setOpenCartDialog(false);
+  };
 
   return (
     <Box sx={{ margin: '36px 0' }}>

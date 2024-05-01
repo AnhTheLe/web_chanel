@@ -22,9 +22,16 @@ interface ListSlideProductProps {
   listVariants?: Variant[];
   slidesPerView?: number;
   fixQuantitySlides?: boolean;
+  onClickBagCart?: (variant: Variant) => void;
 }
 const ListSlideProducts = (props: ListSlideProductProps) => {
-  const { listVariants, slidesPerView, fixQuantitySlides } = props;
+  const { listVariants, slidesPerView, fixQuantitySlides, onClickBagCart } = props;
+
+  const handleOnClickBagCart = (variant: Variant) => {
+    if (onClickBagCart) {
+      onClickBagCart(variant);
+    }
+  };
   return (
     <Box display={'flex'} justifyContent={'center'}>
       <Swiper
@@ -60,7 +67,7 @@ const ListSlideProducts = (props: ListSlideProductProps) => {
         {listVariants &&
           listVariants.map((child, index) => (
             <SwiperSlide key={index}>
-              <ItemProduct key={index} variant={child} />
+              <ItemProduct key={index} variant={child} onClickBagCart={() => handleOnClickBagCart(child)} />
             </SwiperSlide>
           ))}
 

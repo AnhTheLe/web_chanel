@@ -1,14 +1,20 @@
-import { Box, Grid, Icon, IconButton, Typography } from '@mui/material';
+import { Box, Grid, IconButton, Typography } from '@mui/material';
 import { Root, NavButton } from './Header.style';
 import logo from 'src/assets/img/logo.png';
 import SearchIcon from 'src/assets/svg/SearchIcon';
 import UserIcon from 'src/assets/svg/UserIcon';
 import CartIcon from 'src/assets/svg/CartIcon';
-import { useNavigate } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
 import Popover from '../Popover';
 import ArrowLeftDoubleIcon from 'src/assets/svg/ArrowLeftDoubleIcon';
 import { AppContext } from 'src/contexts/app.context';
+import purchaseApi from 'src/api/shoppingCart.api';
+import { useQuery } from '@tanstack/react-query';
+import { formatPriceWithVNDCurrency } from 'src/utils/priceUtils';
+import noproduct from 'src/assets/img/no-product.png';
+
+const MAX_PURCHASES = 10;
 
 export default function Header() {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
@@ -33,6 +39,18 @@ export default function Header() {
         return 'Đăng nhập';
     }
   };
+
+  const { data: purchasesInCartData, refetch } = useQuery({
+    queryKey: ['purchases'],
+    queryFn: purchaseApi.getPurchases,
+    enabled: isAuthenticated
+  });
+
+  const purchasesInCart = purchasesInCartData?.data.data;
+
+  useEffect(() => {
+    refetch;
+  }, [purchasesInCartData, refetch]);
 
   const open = Boolean(anchorEl);
 
@@ -109,9 +127,9 @@ export default function Header() {
           <Popover
             className='flex items-center py-1 text-white hover:text-gray-300 cursor-pointer relative'
             renderPopover={
-              <div className=' bg-white relative shadow-md rounded-sm border border-gray-200'>
+              <Box className=' bg-white relative shadow-md rounded-sm border border-gray-200'>
                 {isAuthenticated ? (
-                  <div className='flex flex-col justify-start py-2 px-2 pr-4 pl-3'>
+                  <Box className='flex flex-col justify-start py-2 px-2 pr-4 pl-3'>
                     <NavButton
                       variant='text'
                       disableRipple
@@ -122,9 +140,9 @@ export default function Header() {
                     >
                       Tài khoản
                     </NavButton>
-                  </div>
+                  </Box>
                 ) : (
-                  <div className='flex flex-col justify-start py-2 px-2 pr-4 pl-3'>
+                  <Box className='flex flex-col justify-start py-2 px-2 pr-4 pl-3'>
                     <NavButton
                       variant='text'
                       disableRipple
@@ -145,9 +163,9 @@ export default function Header() {
                     >
                       Đăng ký
                     </NavButton>
-                  </div>
+                  </Box>
                 )}
-              </div>
+              </Box>
             }
           >
             <IconButton
@@ -166,9 +184,62 @@ export default function Header() {
             </IconButton>
           </Popover>
 
-          <IconButton>
-            <CartIcon></CartIcon>
-          </IconButton>
+          <Box className='col-span-1 justify-self-end'>
+            <Popover
+              renderPopover={
+                <Box className='relative  max-w-[400px] rounded-sm border border-gray-200 bg-white text-sm shadow-md py-2'>
+                  {purchasesInCart && purchasesInCart.length > 0 ? (
+                    <Box className='p-2'>
+                      <Box className='capitalize text-gray-400'>Sản phẩm mới thêm</Box>
+                      <Box className='mt-5 mb-4'>
+                        {purchasesInCart.slice(0, MAX_PURCHASES).map((purchase) => (
+                          <Box className='mt-2 flex py-2 hover:bg-gray-100' key={purchase.variant.id}>
+                            <Box className='flex-shrink-0'>
+                              <img
+                                src={purchase.variant.image}
+                                alt={purchase.variant.image}
+                                className='h-11 w-11 object-cover'
+                              />
+                            </Box>
+                            <Box className='ml-2 flex-grow overflow-hidden'>
+                              <Box className='truncate'>{purchase.variant.name}</Box>
+                            </Box>
+                            <Box className='ml-2 flex-shrink-0'>
+                              <span className='text-orange'>
+                                {formatPriceWithVNDCurrency(purchase.variant.discountedPrice)}
+                              </span>
+                            </Box>
+                          </Box>
+                        ))}
+                      </Box>
+                      <Link
+                        to={'/cart'}
+                        className='rounded-sm bg-orange px-4 py-2 capitalize text-white hover:bg-opacity-90'
+                      >
+                        Xem giỏ hàng
+                      </Link>
+                    </Box>
+                  ) : (
+                    <Box className='flex h-[300px] w-[300px] flex-col items-center justify-center p-2'>
+                      <img src={noproduct} alt='no purchase' className='h-24 w-24' />
+                      <Box className='mt-3 capitalize'>Chưa có sản phẩm</Box>
+                    </Box>
+                  )}
+                </Box>
+              }
+            >
+              <Link to='/' className='relative'>
+                <IconButton>
+                  <CartIcon></CartIcon>
+                </IconButton>
+                {purchasesInCart && purchasesInCart.length > 0 && (
+                  <span className='absolute top-[-10px] left-[24px] rounded-full bg-orange px-[6px] py-[1px] text-xs text-white '>
+                    {purchasesInCart?.length}
+                  </span>
+                )}
+              </Link>
+            </Popover>
+          </Box>
         </Grid>
       </Grid>
       {url !== '' && url !== '/home' && (

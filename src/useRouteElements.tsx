@@ -10,6 +10,7 @@ import Register from './pages/Register/Register';
 import { useContext } from 'react';
 import { AppContext } from './contexts/app.context';
 import Profile from './pages/User/pages/Profile';
+import ShoppingCart from './pages/ShoppingCart/ShoppingCart';
 
 // const isAuthenticated = true;
 function ProtectedRoute() {
@@ -95,6 +96,10 @@ export default function useRouteElements() {
         {
           path: 'profile',
           element: <Profile />
+        },
+        {
+          path: 'cart',
+          element: <ShoppingCart></ShoppingCart>
         }
       ]
     }
