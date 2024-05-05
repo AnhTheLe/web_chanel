@@ -212,7 +212,8 @@ export default function ShoppingCart() {
                                       className='h-20 w-20 flex-shrink-0'
                                       to={`${path.home}${generateNameId({
                                         name: purchase.variant.name,
-                                        id: purchase.variant.id.toString()
+                                        id: purchase.variant.id.toString(),
+                                        productId: purchase.variant.baseId.toString()
                                       })}`}
                                     >
                                       <img alt={purchase.variant.name} src={purchase.variant.image} />
@@ -221,7 +222,8 @@ export default function ShoppingCart() {
                                       <Link
                                         to={`${path.home}${generateNameId({
                                           name: purchase.variant.name,
-                                          id: purchase.variant.id.toString()
+                                          id: purchase.variant.id.toString(),
+                                          productId: purchase.variant.baseId.toString()
                                         })}`}
                                         className='text-left line-clamp-2'
                                       >

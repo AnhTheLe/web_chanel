@@ -45,13 +45,13 @@ const removeSpecialCharacter = (str: string) =>
   // eslint-disable-next-line no-useless-escape
   str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g, '');
 
-export const generateNameId = ({ name, id }: { name: string; id: string }) => {
-  return removeSpecialCharacter(name).replace(/\s/g, '-') + `-i-${id}`;
+export const generateNameId = ({ name, id, productId }: { name: string; id: string; productId: string }) => {
+  return removeSpecialCharacter(name).replace(/\s/g, '-') + `-i-${id}-i-${productId}`;
 };
 
 export const getIdFromNameId = (nameId: string) => {
-  const arr = nameId.split('-i-');
-  return arr[arr.length - 1];
+  const arr = nameId.split('-i-').slice(1);
+  return arr;
 };
 
 export const getAvatarUrl = (avatarName?: string) => (avatarName ? `${config.baseUrl}images/${avatarName}` : userImage);

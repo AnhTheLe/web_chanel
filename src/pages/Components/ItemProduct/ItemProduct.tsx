@@ -12,6 +12,9 @@ import { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import purchaseApi from 'src/api/shoppingCart.api';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import path from 'src/constants/path';
+import { generateNameId } from 'src/utils/utils';
 
 interface ItemProductProps {
   variant: Variant;
@@ -23,6 +26,8 @@ const ItemProduct = (props: ItemProductProps) => {
   const { openModal } = useModal();
   const [openCartDialog, setOpenCartDialog] = useState(false);
   const queryClient = useQueryClient();
+
+  const navigate = useNavigate();
 
   const addToCartMutation = useMutation({
     mutationFn: () => {
@@ -58,7 +63,12 @@ const ItemProduct = (props: ItemProductProps) => {
     >
       <Root className={classes.rootImg}>
         <Box className={classes.img}>
-          <img src={variant.image ?? noImage} alt='' className='lazyLoad loaded' />
+          <img
+            src={variant.image ?? noImage}
+            alt=''
+            className='lazyLoad loaded'
+            style={{ height: '100%', borderRadius: 4 }}
+          />
         </Box>
 
         <Box className={classes.searchIcon}>
@@ -88,6 +98,11 @@ const ItemProduct = (props: ItemProductProps) => {
           style={{ maxWidth: 220 }}
           noWrap
           className={classes.variantNameHover}
+          onClick={() => {
+            navigate(
+              `${path.home}${generateNameId({ name: variant.name, id: variant.id.toString(), productId: variant.baseId.toString() })}`
+            );
+          }}
         >
           {variant.name}
         </TypographyCus>
@@ -100,7 +115,7 @@ const ItemProduct = (props: ItemProductProps) => {
           </TypographyCus>
         </Box>
       </NameAndPriceWrap>
-      <CartDialog isOpenModal={openCartDialog} setOpen={setOpenCartDialog} />
+      <CartDialog isOpenModal={openCartDialog} setOpen={setOpenCartDialog} title='Thêm vào giỏ hàng thành công' />
     </form>
   );
 };

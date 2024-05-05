@@ -24,7 +24,7 @@ export const Root = styled(Box)(({ theme }) => ({
   [`&.${classes.rootImg}`]: {
     display: 'flex',
     justifyContent: 'center',
-    borderRadius: 8,
+    borderRadius: 4,
     position: 'relative',
     padding: 10,
     width: 232,

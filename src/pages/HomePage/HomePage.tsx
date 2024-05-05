@@ -17,7 +17,6 @@ import ListSlideProducts from './components/ListSlideProducts/ListSlideProducts'
 import { useQuery } from '@tanstack/react-query';
 import productApi from 'src/api/product.api';
 import { ProductFilter } from 'src/types/product.type';
-import CartDialog from './components/DialogCart/CartDialog';
 import { useState } from 'react';
 
 const HomePage = () => {
