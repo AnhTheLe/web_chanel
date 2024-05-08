@@ -8,13 +8,15 @@ import BagCartIcon from 'src/assets/svg/BagCartIcon';
 import { formatPriceWithVNDCurrency } from 'src/utils/priceUtils';
 import useModal from 'src/pages/HomePage/hocs/modal/useModal';
 import CartDialog from 'src/pages/HomePage/components/DialogCart/CartDialog';
-import { useState } from 'react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useContext, useState } from 'react';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import purchaseApi from 'src/api/shoppingCart.api';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import path from 'src/constants/path';
 import { generateNameId } from 'src/utils/utils';
+import { AppContext } from 'src/contexts/app.context';
+import { ExtendedPurchase } from 'src/types/purchase.type';
 
 interface ItemProductProps {
   variant: Variant;
@@ -23,15 +25,25 @@ interface ItemProductProps {
 
 const ItemProduct = (props: ItemProductProps) => {
   const { variant, onClickBagCart } = props;
-  const { openModal } = useModal();
+  const { extendedPurchases, setExtendedPurchases } = useContext(AppContext);
   const [openCartDialog, setOpenCartDialog] = useState(false);
   const queryClient = useQueryClient();
+
+  const { data: purchasesInCartData, refetch } = useQuery({
+    queryKey: ['purchases'],
+    queryFn: purchaseApi.getPurchases
+  });
+
+  const purchasesInCart = purchasesInCartData?.data.data;
 
   const navigate = useNavigate();
 
   const addToCartMutation = useMutation({
     mutationFn: () => {
       return purchaseApi.addToCart({ productId: variant.id, quantity: 1 });
+    },
+    onSuccess: () => {
+      refetch();
     }
   });
 
@@ -51,6 +63,48 @@ const ItemProduct = (props: ItemProductProps) => {
       }
     });
   };
+
+  const handleOnClickBuyNow = () => {
+    addToCartMutation.mutate(onClickBagCart && onClickBagCart(variant), {
+      onSuccess: (data) => {
+        // refetch();
+        const purchasesInCartDatas = purchasesInCartData?.data.data;
+        if (!extendedPurchases.find((item) => item.variant.id === variant.id)) {
+          setExtendedPurchases([
+            ...extendedPurchases,
+            {
+              variant: variant,
+              quantity: 1,
+              checked: true,
+              disabled: false,
+              idCart: data.data.data.id
+            } as unknown as ExtendedPurchase
+          ]);
+        } else {
+          const checkedPurchase: ExtendedPurchase[] = extendedPurchases.map((item) =>
+            item.variant.id === variant.id
+              ? {
+                  ...item,
+                  quantity: purchasesInCartDatas?.find((p) => p.variant.id === variant.id)?.quantity || 1,
+                  checked: true
+                }
+              : { ...item, checked: false }
+          );
+          setExtendedPurchases(checkedPurchase);
+        }
+        navigate('/checkout');
+      },
+      onError: (error) => {
+        toast.error('Có lỗi khi thêm sản phẩm vào đơn hàng', { autoClose: 1000 });
+      }
+    });
+
+    // set toàn bộ variant trong giỏ thành uncheck
+    if (extendedPurchases.find((item) => item.variant.id === variant.id && item.checked === false)) {
+      navigate('/checkout');
+    }
+  };
+
   return (
     <form
       style={{
@@ -75,7 +129,7 @@ const ItemProduct = (props: ItemProductProps) => {
           <SearchIcon />
         </Box>
         <Box className={classes.buttonWrap}>
-          <Button className={classes.buttonBuyNow}>
+          <Button className={classes.buttonBuyNow} onClick={handleOnClickBuyNow}>
             <Typography fontSize={14} fontWeight={550}>
               Mua ngay
             </Typography>

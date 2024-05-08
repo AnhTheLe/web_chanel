@@ -1,0 +1,380 @@
+[
+  {
+    "id": 1,
+    "name": "Hà Nội",
+    "code": "1",
+    "country_id": 201
+  },
+  {
+    "id": 2,
+    "name": "TP Hồ Chí Minh",
+    "code": "2",
+    "country_id": 201
+  },
+  {
+    "id": 3,
+    "name": "An Giang",
+    "code": "3",
+    "country_id": 201
+  },
+  {
+    "id": 4,
+    "name": "Bà Rịa-Vũng Tàu",
+    "code": "4",
+    "country_id": 201
+  },
+  {
+    "id": 5,
+    "name": "Bắc Giang",
+    "code": "5",
+    "country_id": 201
+  },
+  {
+    "id": 6,
+    "name": "Bắc Kạn",
+    "code": "6",
+    "country_id": 201
+  },
+  {
+    "id": 7,
+    "name": "Bạc Liêu",
+    "code": "7",
+    "country_id": 201
+  },
+  {
+    "id": 8,
+    "name": "Bắc Ninh",
+    "code": "8",
+    "country_id": 201
+  },
+  {
+    "id": 9,
+    "name": "Bến Tre",
+    "code": "9",
+    "country_id": 201
+  },
+  {
+    "id": 10,
+    "name": "Bình Dương",
+    "code": "10",
+    "country_id": 201
+  },
+  {
+    "id": 11,
+    "name": "Bình Định",
+    "code": "11",
+    "country_id": 201
+  },
+  {
+    "id": 12,
+    "name": "Bình Phước",
+    "code": "12",
+    "country_id": 201
+  },
+  {
+    "id": 13,
+    "name": "Bình Thuận",
+    "code": "13",
+    "country_id": 201
+  },
+  {
+    "id": 14,
+    "name": "Cà Mau",
+    "code": "14",
+    "country_id": 201
+  },
+  {
+    "id": 15,
+    "name": "Cao Bằng",
+    "code": "15",
+    "country_id": 201
+  },
+  {
+    "id": 16,
+    "name": "Cần Thơ",
+    "code": "16",
+    "country_id": 201
+  },
+  {
+    "id": 17,
+    "name": "Đà Nẵng",
+    "code": "17",
+    "country_id": 201
+  },
+  {
+    "id": 18,
+    "name": "Đắk Lắk",
+    "code": "18",
+    "country_id": 201
+  },
+  {
+    "id": 19,
+    "name": "Đắk Nông",
+    "code": "19",
+    "country_id": 201
+  },
+  {
+    "id": 20,
+    "name": "Điện Biên",
+    "code": "20",
+    "country_id": 201
+  },
+  {
+    "id": 21,
+    "name": "Đồng Nai",
+    "code": "21",
+    "country_id": 201
+  },
+  {
+    "id": 22,
+    "name": "Đồng Tháp",
+    "code": "22",
+    "country_id": 201
+  },
+  {
+    "id": 23,
+    "name": "Gia Lai",
+    "code": "23",
+    "country_id": 201
+  },
+  {
+    "id": 24,
+    "name": "Hà Giang",
+    "code": "24",
+    "country_id": 201
+  },
+  {
+    "id": 25,
+    "name": "Hà Nam",
+    "code": "25",
+    "country_id": 201
+  },
+  {
+    "id": 26,
+    "name": "Hà Tĩnh",
+    "code": "26",
+    "country_id": 201
+  },
+  {
+    "id": 27,
+    "name": "Hải Dương",
+    "code": "27",
+    "country_id": 201
+  },
+  {
+    "id": 28,
+    "name": "Hải Phòng",
+    "code": "28",
+    "country_id": 201
+  },
+  {
+    "id": 29,
+    "name": "Hậu Giang",
+    "code": "29",
+    "country_id": 201
+  },
+  {
+    "id": 30,
+    "name": "Hòa Bình",
+    "code": "30",
+    "country_id": 201
+  },
+  {
+    "id": 31,
+    "name": "Hưng Yên",
+    "code": "31",
+    "country_id": 201
+  },
+  {
+    "id": 32,
+    "name": "Khánh Hòa",
+    "code": "32",
+    "country_id": 201
+  },
+  {
+    "id": 33,
+    "name": "Kiên Giang",
+    "code": "33",
+    "country_id": 201
+  },
+  {
+    "id": 34,
+    "name": "Kon Tum",
+    "code": "34",
+    "country_id": 201
+  },
+  {
+    "id": 35,
+    "name": "Lai Châu",
+    "code": "35",
+    "country_id": 201
+  },
+  {
+    "id": 36,
+    "name": "Lâm Đồng",
+    "code": "36",
+    "country_id": 201
+  },
+  {
+    "id": 37,
+    "name": "Lạng Sơn",
+    "code": "37",
+    "country_id": 201
+  },
+  {
+    "id": 38,
+    "name": "Lào Cai",
+    "code": "38",
+    "country_id": 201
+  },
+  {
+    "id": 39,
+    "name": "Long An",
+    "code": "39",
+    "country_id": 201
+  },
+  {
+    "id": 40,
+    "name": "Nam Định",
+    "code": "40",
+    "country_id": 201
+  },
+  {
+    "id": 41,
+    "name": "Nghệ An",
+    "code": "41",
+    "country_id": 201
+  },
+  {
+    "id": 42,
+    "name": "Ninh Bình",
+    "code": "42",
+    "country_id": 201
+  },
+  {
+    "id": 43,
+    "name": "Ninh Thuận",
+    "code": "43",
+    "country_id": 201
+  },
+  {
+    "id": 44,
+    "name": "Phú Thọ",
+    "code": "44",
+    "country_id": 201
+  },
+  {
+    "id": 45,
+    "name": "Phú Yên",
+    "code": "45",
+    "country_id": 201
+  },
+  {
+    "id": 46,
+    "name": "Quảng Bình",
+    "code": "46",
+    "country_id": 201
+  },
+  {
+    "id": 47,
+    "name": "Quảng Nam",
+    "code": "47",
+    "country_id": 201
+  },
+  {
+    "id": 48,
+    "name": "Quảng Ngãi",
+    "code": "48",
+    "country_id": 201
+  },
+  {
+    "id": 49,
+    "name": "Quảng Ninh",
+    "code": "49",
+    "country_id": 201
+  },
+  {
+    "id": 50,
+    "name": "Quảng Trị",
+    "code": "50",
+    "country_id": 201
+  },
+  {
+    "id": 51,
+    "name": "Sóc Trăng",
+    "code": "51",
+    "country_id": 201
+  },
+  {
+    "id": 52,
+    "name": "Sơn La",
+    "code": "52",
+    "country_id": 201
+  },
+  {
+    "id": 53,
+    "name": "Tây Ninh",
+    "code": "53",
+    "country_id": 201
+  },
+  {
+    "id": 54,
+    "name": "Thái Bình",
+    "code": "54",
+    "country_id": 201
+  },
+  {
+    "id": 55,
+    "name": "Thái Nguyên",
+    "code": "55",
+    "country_id": 201
+  },
+  {
+    "id": 56,
+    "name": "Thanh Hóa",
+    "code": "56",
+    "country_id": 201
+  },
+  {
+    "id": 57,
+    "name": "Thừa Thiên Huế",
+    "code": "57",
+    "country_id": 201
+  },
+  {
+    "id": 58,
+    "name": "Tiền Giang",
+    "code": "58",
+    "country_id": 201
+  },
+  {
+    "id": 59,
+    "name": "Trà Vinh",
+    "code": "59",
+    "country_id": 201
+  },
+  {
+    "id": 60,
+    "name": "Tuyên Quang",
+    "code": "60",
+    "country_id": 201
+  },
+  {
+    "id": 61,
+    "name": "Vĩnh Long",
+    "code": "61",
+    "country_id": 201
+  },
+  {
+    "id": 62,
+    "name": "Vĩnh Phúc",
+    "code": "62",
+    "country_id": 201
+  },
+  {
+    "id": 63,
+    "name": "Yên Bái",
+    "code": "63",
+    "country_id": 201
+  }
+]

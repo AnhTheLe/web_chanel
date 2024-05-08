@@ -1,3 +1,3 @@
-import DateSelect from './DateSelect'
+import DateSelect from './DateSelect';
 
-export default DateSelect
+export default DateSelect;

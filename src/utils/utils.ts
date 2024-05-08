@@ -4,6 +4,7 @@ import HttpStatusCode from 'src/constants/httpStatusCodeEnnum.enum';
 import { ErrorResponse } from 'src/types/utils.type';
 
 import userImage from 'src/assets/user.svg';
+import { Variant } from 'src/types/product.type';
 
 export function isAxiosError<T>(error: unknown): error is AxiosError<T> {
   // eslint-disable-next-line import/no-named-as-default-member
@@ -52,6 +53,10 @@ export const generateNameId = ({ name, id, productId }: { name: string; id: stri
 export const getIdFromNameId = (nameId: string) => {
   const arr = nameId.split('-i-').slice(1);
   return arr;
+};
+
+export const getOptionValueName = (variant: Variant) => {
+  return `${variant.value1} - ${variant.value2} - ${variant.value3}`;
 };
 
 export const getAvatarUrl = (avatarName?: string) => (avatarName ? `${config.baseUrl}images/${avatarName}` : userImage);

@@ -1,18 +1,18 @@
-import { yupResolver } from '@hookform/resolvers/yup'
-import { useMutation } from '@tanstack/react-query'
-import omit from 'lodash/omit'
-import { useForm } from 'react-hook-form'
-import { toast } from 'react-toastify'
-import userApi from 'src/apis/user.api'
-import Button from 'src/components/Button'
-import Input from 'src/components/Input'
-import { ErrorResponse, NoUndefinedField } from 'src/types/utils.type'
-import { userSchema, UserSchema } from 'src/utils/rules'
-import { isAxiosUnprocessableEntityError } from 'src/utils/utils'
-import { ObjectSchema } from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useMutation } from '@tanstack/react-query';
+import omit from 'lodash/omit';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
+import userApi from 'src/api/user.api';
+import Button from 'src/components/Button';
+import Input from 'src/components/Input';
+import { ErrorResponse, NoUndefinedField } from 'src/types/utils.type';
+import { userSchema, UserSchema } from 'src/utils/rules';
+import { isAxiosUnprocessableEntityError } from 'src/utils/utils';
+import { ObjectSchema } from 'yup';
 
-type FormData = NoUndefinedField<Pick<UserSchema, 'password' | 'new_password' | 'confirm_password'>>
-const passwordSchema = userSchema.pick(['password', 'new_password', 'confirm_password'])
+type FormData = NoUndefinedField<Pick<UserSchema, 'password' | 'newPassword' | 'confirmPassword'>>;
+const passwordSchema = userSchema.pick(['password', 'newPassword', 'confirmPassword']);
 
 export default function ChangePassword() {
   const {
@@ -24,32 +24,38 @@ export default function ChangePassword() {
   } = useForm<FormData>({
     defaultValues: {
       password: '',
-      confirm_password: '',
-      new_password: ''
+      confirmPassword: '',
+      newPassword: ''
     },
     resolver: yupResolver<FormData>(passwordSchema as ObjectSchema<FormData>)
-  })
-  const updateProfileMutation = useMutation(userApi.updateProfile)
+  });
+  const updateProfileMutation = useMutation({
+    mutationFn: userApi.updatePassword,
+    onSuccess: () => {
+      return;
+    }
+  });
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      const res = await updateProfileMutation.mutateAsync(omit(data, ['confirm_password']))
-      toast.success(res.data.message)
-      reset()
+      const { confirmPassword, ...updateData } = data;
+      const res = await updateProfileMutation.mutateAsync(updateData);
+      toast.success(res.data.message);
+      reset();
     } catch (error) {
       if (isAxiosUnprocessableEntityError<ErrorResponse<FormData>>(error)) {
-        const formError = error.response?.data.data
+        const formError = error.response?.data.data;
         if (formError) {
           Object.keys(formError).forEach((key) => {
             setError(key as keyof FormData, {
               message: formError[key as keyof FormData],
               type: 'Server'
-            })
-          })
+            });
+          });
         }
       }
     }
-  })
+  });
 
   return (
     <div className='rounded-sm bg-white px-2 pb-10 shadow md:px-7 md:pb-20'>
@@ -80,10 +86,10 @@ export default function ChangePassword() {
                 classNameInput='w-full rounded-sm border border-gray-300 px-3 py-2 outline-none focus:border-gray-500 focus:shadow-sm'
                 className='relative '
                 register={register}
-                name='new_password'
+                name='newPassword'
                 type='password'
                 placeholder='Mật khẩu mới'
-                errorMessage={errors.new_password?.message}
+                errorMessage={errors.newPassword?.message}
               />
             </div>
           </div>
@@ -94,10 +100,10 @@ export default function ChangePassword() {
                 classNameInput='w-full rounded-sm border border-gray-300 px-3 py-2 outline-none focus:border-gray-500 focus:shadow-sm'
                 className='relative '
                 register={register}
-                name='confirm_password'
+                name='confirmPassword'
                 type='password'
                 placeholder='Nhập lại mật khẩu'
-                errorMessage={errors.confirm_password?.message}
+                errorMessage={errors.confirmPassword?.message}
               />
             </div>
           </div>
@@ -115,5 +121,5 @@ export default function ChangePassword() {
         </div>
       </form>
     </div>
-  )
+  );
 }

@@ -7,12 +7,15 @@ import Products from './pages/Products/Products';
 import Blogs from './pages/Blogs/Blogs';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
-import { useContext } from 'react';
+import { Suspense, useContext } from 'react';
 import { AppContext } from './contexts/app.context';
 import Profile from './pages/User/pages/Profile';
 import ShoppingCart from './pages/ShoppingCart/ShoppingCart';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import path from './constants/path';
+import CheckoutPage from './pages/Checkout/CheckoutPage';
+import UserLayout from './pages/User/layouts/UserLayout';
+import ChangePassword from './pages/User/pages/ChangePassword';
 
 // const isAuthenticated = true;
 function ProtectedRoute() {
@@ -96,8 +99,34 @@ export default function useRouteElements() {
           element: <div>About</div>
         },
         {
-          path: 'profile',
-          element: <Profile />
+          path: path.user,
+          element: <UserLayout />,
+          children: [
+            {
+              path: path.profile,
+              element: (
+                <Suspense>
+                  <Profile />
+                </Suspense>
+              )
+            },
+            {
+              path: path.changePassword,
+              element: (
+                <Suspense>
+                  <ChangePassword />
+                </Suspense>
+              )
+            },
+            // {
+            //   path: path.historyPurchase,
+            //   element: (
+            //     <Suspense>
+            //       <HistoryPurchase />
+            //     </Suspense>
+            //   )
+            // }
+          ]
         },
         {
           path: 'cart',
@@ -108,6 +137,10 @@ export default function useRouteElements() {
           element: <ProductDetail />
         }
       ]
+    },
+    {
+      path: '/checkout',
+      element: <CheckoutPage />
     }
   ]);
   return routeElements;

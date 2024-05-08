@@ -1,3 +1,3 @@
-import UserSideNav from './UserSideNav'
+import UserSideNav from './UserSideNav';
 
-export default UserSideNav
+export default UserSideNav;

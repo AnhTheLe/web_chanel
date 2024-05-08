@@ -7,13 +7,16 @@ const productApi = {
     return http.get<ProductList<Variant>>('variants', { params });
   },
   getProductDetail: (id: number) => {
-    return http.get<ResponseApi<Product[]>>(`products/${id}`);
+    return http.get<ResponseApi<Product>>(`products/${id}`);
   },
   getTopDiscountVariant: () => {
     return http.get<ResponseApi<Variant[]>>('variants/top-discount');
   },
   getTopSaleVariant: () => {
     return http.get<ResponseApi<TopSaleVariantType[]>>('variants/top-sale');
+  },
+  getProductSuggestions: (productId: number) => {
+    return http.get<ResponseApi<Variant[]>>(`products/${productId}/suggestions`);
   }
 };
 

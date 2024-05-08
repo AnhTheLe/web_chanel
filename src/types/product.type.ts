@@ -40,6 +40,7 @@ export type Product = {
   attribute2: string;
   attribute3: string;
   images: string[];
+  description: string;
   variants: Variant[];
 };
 

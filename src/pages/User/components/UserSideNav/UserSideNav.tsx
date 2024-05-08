@@ -1,16 +1,16 @@
-import classNames from 'classnames'
-import { useContext } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import path from 'src/constants/path'
-import { AppContext } from 'src/contexts/app.context'
-import { getAvatarUrl } from 'src/utils/utils'
+import classNames from 'classnames';
+import { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import path from 'src/constants/path';
+import { AppContext } from 'src/contexts/app.context';
+import { getAvatarUrl } from 'src/utils/utils';
 
 export default function UserSideNav() {
-  const { profile } = useContext(AppContext)
+  const { profile } = useContext(AppContext);
 
   return (
     <div>
-      <div className='flex items-center border-b border-b-gray-200 py-4'>
+      <div className='flex flex-col items-center border-b border-b-gray-200 py-4'>
         <Link to={path.profile} className='h-12 w-12 flex-shrink-0 overflow-hidden rounded-full border border-black/10'>
           <img src={getAvatarUrl(profile?.avatar)} alt='' className='h-full w-full object-cover' />
         </Link>
@@ -79,5 +79,5 @@ export default function UserSideNav() {
         </NavLink>
       </div>
     </div>
-  )
+  );
 }

@@ -215,8 +215,13 @@ export default function ShoppingCart() {
                                         id: purchase.variant.id.toString(),
                                         productId: purchase.variant.baseId.toString()
                                       })}`}
+                                      style={{ objectFit: 'cover' }}
                                     >
-                                      <img alt={purchase.variant.name} src={purchase.variant.image} />
+                                      <img
+                                        alt={purchase.variant.name}
+                                        src={purchase.variant.image}
+                                        style={{ height: '100%' }}
+                                      />
                                     </Link>
                                     <Box className='flex-grow px-2 pt-1 pb-2'>
                                       <Link
@@ -271,14 +276,14 @@ export default function ShoppingCart() {
                                   />
                                 </Box>
                                 <Box className='col-span-1'>
-                                  <span className='text-orange'>
+                                  <span className='text-[#ef1104]'>
                                     {formatPriceWithVNDCurrency(purchase.variant.discountedPrice * purchase.quantity)}
                                   </span>
                                 </Box>
                                 <Box className='col-span-1'>
                                   <button
                                     onClick={handleDelete(index)}
-                                    className='bg-none text-black transition-colors hover:text-orange'
+                                    className='bg-none text-black transition-colors hover:text-[#a05139]'
                                   >
                                     Xóa
                                   </button>
@@ -313,19 +318,19 @@ export default function ShoppingCart() {
                     <Box>
                       <Box className='flex items-center sm:justify-end'>
                         <Box>Tổng thanh toán ({checkedPurchasesCount} sản phẩm):</Box>
-                        <Box className='ml-2 text-2xl text-orange'>
+                        <Box className='ml-2 text-2xl text-[#ef1104]'>
                           {formatPriceWithVNDCurrency(totalCheckedPurchasePrice)}
                         </Box>
                       </Box>
                       <Box className='flex items-center text-sm sm:justify-end'>
                         <Box className='text-gray-500'>Tiết kiệm</Box>
-                        <Box className='ml-6 text-orange'>
+                        <Box className='ml-6 text-[#ef1104]'>
                           {formatPriceWithVNDCurrency(totalCheckedPurchaseSavingPrice)}
                         </Box>
                       </Box>
                     </Box>
                     <Button
-                      className='mt-5 flex h-10 w-52 items-center justify-center bg-red-500 text-sm uppercase text-white hover:bg-red-600 sm:ml-4 sm:mt-0'
+                      className='mt-5 flex h-10 w-52 rounded-[4px] items-center justify-center bg-[#ffb9a4] border border-[#ffb9a4] text-sm uppercase text-[#a05139] hover:bg-white sm:ml-4 sm:mt-0'
                       onClick={handleBuyPurchases}
                       disabled={buyProductsMutation.isPending}
                     >

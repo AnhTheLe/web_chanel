@@ -134,7 +134,7 @@ export default function Header() {
                       variant='text'
                       disableRipple
                       onClick={() => {
-                        navigate('/profile');
+                        navigate('/user');
                       }}
                       sx={{ fontSize: 14 }}
                     >
@@ -228,7 +228,7 @@ export default function Header() {
                 </Box>
               }
             >
-              <Link to='/' className='relative'>
+              <Link to='/cart' className='relative'>
                 <IconButton>
                   <CartIcon></CartIcon>
                 </IconButton>
