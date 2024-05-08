@@ -24,8 +24,7 @@ export type CustomerResponse = {
   email: string | null;
   verifiedEmail: boolean;
   phone: string | null;
-  firstName: string | null;
-  lastName: string | null;
+  name: string | null;
   gender: string;
   dob: string | null;
   acceptsMarketing: boolean;
@@ -41,41 +40,9 @@ export type CustomerResponse = {
   defaultAddress: CustomerAddress;
 };
 
-export type CustomerRequest = {
+export type CustomerAddressRequest = {
   id?: number | null;
-  firstName?: string | null;
-  lastName?: string | null;
-  phone?: string | null;
-  email?: string | null;
-  gender?: string | null;
-  addresses?: CustomerAddress[];
-  acceptsMarketing: boolean;
-  dob?: string | null;
-};
-// kiểm tra nghiệp vụ API để set value/ null / undefined
-export type CustomerModelView = {
-  id?: number;
-  email?: string;
-  phone?: string; // phone after format region
-  firstName?: string;
-  lastName?: string;
-  gender?: string;
-  dob?: string | null;
-  acceptsMarketing?: boolean;
-  addresses?: CustomerAddress;
-  // code?: string;
-  // tags?: string[];
   address?: string;
-  // group?: string;
-  // employee?: string;
-  phoneRegion?: string;
-  provinceDistrict?: ProvinceDistrict;
-  ward?: Ward | null;
-};
-
-export type CustomerAddress = {
-  id?: number;
-  address1?: string;
   city?: string | null;
   company?: string | null;
   country?: string | null;
@@ -86,9 +53,40 @@ export type CustomerAddress = {
   districtCode?: string | null;
   ward?: string | null;
   wardCode?: string | null;
-  firstName?: string | null;
-  lastName?: string | null;
+  customerName?: string | null;
   phone?: string | null; // phone native
   zip?: string | null;
-  default?: boolean;
+  isDefault?: boolean;
+};
+// kiểm tra nghiệp vụ API để set value/ null / undefined
+export type CustomerAddressModelView = {
+  id?: number;
+  phone?: string; // phone after format region
+  customerName?: string;
+  address?: string;
+  // group?: string;
+  // employee?: string;
+  phoneRegion?: string;
+  provinceDistrict?: ProvinceDistrict;
+  ward?: Ward | null;
+  isDefault?: boolean;
+};
+
+export type CustomerAddress = {
+  id?: number;
+  address?: string;
+  city?: string | null;
+  company?: string | null;
+  country?: string | null;
+  countryCode?: string | null;
+  province?: string | null;
+  provinceCode?: string | null;
+  district?: string | null;
+  districtCode?: string | null;
+  ward?: string | null;
+  wardCode?: string | null;
+  customerName?: string | null;
+  phone?: string | null; // phone native
+  zip?: string | null;
+  isDefault?: boolean;
 };

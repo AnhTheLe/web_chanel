@@ -1,6 +1,6 @@
 export const Countries = {
   THAI_LAND: 181,
-  VIET_NAM: 201,
+  VIET_NAM: 201
 };
 export type PhoneRegion = {
   id: string;

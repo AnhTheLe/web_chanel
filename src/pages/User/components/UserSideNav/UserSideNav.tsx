@@ -77,6 +77,20 @@ export default function UserSideNav() {
           </div>
           Đơn mua
         </NavLink>
+        <NavLink
+          to={path.addresses}
+          className={({ isActive }) =>
+            classNames('mt-4 flex items-center  capitalize transition-colors', {
+              'text-orange': isActive,
+              'text-gray-600': !isActive
+            })
+          }
+        >
+          <div className='mr-3 h-[22px] w-[22px]'>
+            <img src='https://cf.shopee.vn/file/f0049e9df4e536bc3e7f140d071e9078' alt='' className='h-full w-full' />
+          </div>
+          Sổ địa chỉ
+        </NavLink>
       </div>
     </div>
   );

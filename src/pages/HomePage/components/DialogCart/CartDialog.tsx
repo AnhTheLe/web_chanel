@@ -1,6 +1,5 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton } from '@mui/material';
 import React, { Dispatch, ReactNode, SetStateAction, useContext, useEffect, useMemo } from 'react';
-import useModal from '../../hocs/modal/useModal';
 import TypographyCus, { TEXTSIZE } from 'src/components/PosTypography/TypographyCus';
 import CloseIcon from 'src/assets/svg/CloseIcon';
 import { produce } from 'immer';
@@ -323,14 +322,14 @@ const CartDialog = (props: ConfirmDialogProps) => {
                                     />
                                   </Box>
                                   <Box className='col-span-1'>
-                                    <span className='text-orange'>
+                                    <span className='text-[#a05139]'>
                                       {formatPriceWithVNDCurrency(purchase.variant.discountedPrice * purchase.quantity)}
                                     </span>
                                   </Box>
                                   <Box className='col-span-1'>
                                     <button
                                       onClick={handleDelete(index)}
-                                      className='bg-none text-black transition-colors hover:text-orange'
+                                      className='bg-none text-black transition-colors hover:text-[#a05139]'
                                     >
                                       Xóa
                                     </button>
@@ -352,7 +351,7 @@ const CartDialog = (props: ConfirmDialogProps) => {
                 <Box className='mt-5 text-center'>
                   <Link
                     to={path.home}
-                    className=' rounded-sm bg-orange px-10 py-2  uppercase text-white transition-all hover:bg-orange/80'
+                    className=' rounded-sm bg-[#ffb9a4] border border-[#ffb9a4] px-10 py-2  uppercase text-white transition-all hover:bg-white/80'
                   >
                     Mua ngay
                   </Link>
@@ -366,11 +365,11 @@ const CartDialog = (props: ConfirmDialogProps) => {
       <DialogActions className={classes.dialogFooter}>
         <Box className='flex items-center sm:justify-end'>
           <Box>Tổng thanh toán ({checkedPurchasesCount} sản phẩm):</Box>
-          <Box className='ml-2 text-2xl text-orange'>{formatPriceWithVNDCurrency(totalCheckedPurchasePrice)}</Box>
+          <Box className='ml-2 text-2xl text-[#a05139]'>{formatPriceWithVNDCurrency(totalCheckedPurchasePrice)}</Box>
         </Box>
         <Button
           component='button' // Add the component prop with the value of 'button'
-          style={{ backgroundColor: '#EB4444', border: '1px solid #F5A2A2', maxWidth: '40%', color: '#fff' }}
+          style={{ backgroundColor: '#ffb9a4', border: '1px solid #F5A2A2', maxWidth: '40%', color: '#fff' }}
         >
           Thanh toán
         </Button>

@@ -16,6 +16,7 @@ import path from './constants/path';
 import CheckoutPage from './pages/Checkout/CheckoutPage';
 import UserLayout from './pages/User/layouts/UserLayout';
 import ChangePassword from './pages/User/pages/ChangePassword';
+import Address from './pages/User/pages/Address/Address';
 
 // const isAuthenticated = true;
 function ProtectedRoute() {
@@ -118,6 +119,14 @@ export default function useRouteElements() {
                 </Suspense>
               )
             },
+            {
+              path: path.addresses,
+              element: (
+                <Suspense>
+                  <Address />
+                </Suspense>
+              )
+            }
             // {
             //   path: path.historyPurchase,
             //   element: (
