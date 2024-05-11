@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import AddressApiService from 'src/api/AddressApiService';
 import TypographyCus, { TEXTSIZE } from 'src/components/PosTypography/TypographyCus';
@@ -36,25 +37,27 @@ const InputChoiceWard = (props: InputChoiceWardProps, ref: any) => {
   };
 
   return (
-    <SearchSuggest
-      uniqKey={'id'}
-      getLabelSelect={renderValue}
-      title={label}
-      value={value}
-      getOptionLabel={(option) => `${option?.name}` || ''}
-      renderOption={(option) => {
-        return <TypographyCus size={TEXTSIZE.size14}>{option?.name}</TypographyCus>;
-      }}
-      options={wards}
-      onChange={(value) => {
-        if (!value?.id) {
-          onChange(null);
-        } else {
-          onChange(value);
-        }
-      }}
-      displayPlaceholder='Chọn Phường/Xã'
-    />
+    <Box marginBottom={16}>
+      <SearchSuggest
+        uniqKey={'id'}
+        getLabelSelect={renderValue}
+        title={label}
+        value={value}
+        getOptionLabel={(option) => `${option?.name}` || ''}
+        renderOption={(option) => {
+          return <TypographyCus size={TEXTSIZE.size14}>{option?.name}</TypographyCus>;
+        }}
+        options={wards}
+        onChange={(value) => {
+          if (!value?.id) {
+            onChange(null);
+          } else {
+            onChange(value);
+          }
+        }}
+        displayPlaceholder='Chọn Phường/Xã'
+      />
+    </Box>
   );
 };
 

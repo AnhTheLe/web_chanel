@@ -144,12 +144,12 @@ export default function useRouteElements() {
         {
           path: path.productDetail,
           element: <ProductDetail />
+        },
+        {
+          path: path.checkout,
+          element: <CheckoutPage />
         }
       ]
-    },
-    {
-      path: '/checkout',
-      element: <CheckoutPage />
     }
   ]);
   return routeElements;

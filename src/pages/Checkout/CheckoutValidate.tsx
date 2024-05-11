@@ -1,10 +1,9 @@
 import _ from 'lodash';
 import { REGEX_EMAIL, REGEX_PHONE_NUMBER } from 'src/utils/REGEX';
 import * as yup from 'yup';
-
-export const handleValidateCustomer = () => {
+export const handleValidateCheckout= () => {
   return yup.object().shape({
-    name: yup.string().nullable().max(50, 'Họ khách hàng không được vượt quá 50 kí tự'),
+    name: yup.string().nullable().max(50, 'Tên khách hàng không được vượt quá 50 kí tự'),
     phone: yup.lazy(() => {
       return yup
         .string()

@@ -121,7 +121,7 @@ const InputChoiceProvinceDistrict = (props: InputChoiceProvinceDistrictProps, re
   return (
     <Box className={classes.root}>
       <Box className={classes.title}>
-        <TypographyCus size={TEXTSIZE.size14} textColor={'#333'}>
+        <TypographyCus size={TEXTSIZE.size12} textColor={'#79808A'}>
           Khu vực
         </TypographyCus>
       </Box>

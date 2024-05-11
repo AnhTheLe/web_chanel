@@ -13,6 +13,7 @@ import purchaseApi from 'src/api/shoppingCart.api';
 import { useQuery } from '@tanstack/react-query';
 import { formatPriceWithVNDCurrency } from 'src/utils/priceUtils';
 import noproduct from 'src/assets/img/no-product.png';
+import path from 'src/constants/path';
 
 const MAX_PURCHASES = 10;
 
@@ -134,7 +135,7 @@ export default function Header() {
                       variant='text'
                       disableRipple
                       onClick={() => {
-                        navigate('/user');
+                        navigate(path.profile);
                       }}
                       sx={{ fontSize: 14 }}
                     >

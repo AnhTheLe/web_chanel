@@ -112,7 +112,7 @@ const SearchSuggest = <T,>(props: SearchSuggestProps<T>) => {
   const renderNoSuggestItem = () => {
     return (
       <Box className={classes.noOptions}>
-        <TypographyCus size={TEXTSIZE.size14} textColor={colors.text[100]}>
+        <TypographyCus size={TEXTSIZE.size14} textColor={'#79808A'}>
           Vui lòng chọn khu vực
         </TypographyCus>
       </Box>
@@ -122,7 +122,7 @@ const SearchSuggest = <T,>(props: SearchSuggestProps<T>) => {
     <Box className={classes.root}>
       {title && (
         <Box className={classes.title}>
-          <TypographyCus size={TEXTSIZE.size14} textColor={colors.text[70]}>
+          <TypographyCus size={TEXTSIZE.size12} textColor={'#79808A'}>
             {title}
           </TypographyCus>
         </Box>

@@ -9,15 +9,8 @@ import InputChoiceWard from '../InputChoiceWard/InputChoiceWard';
 
 import { handleValidateCustomer } from './CustomerValidate';
 import useStyles from './PopupAddress.style';
-import {
-  CustomerAddress,
-  CustomerAddressModelView,
-  CustomerAddressRequest,
-  CustomerResponse
-} from 'src/types/user.type';
-import { renderPhone } from 'src/utils/customerHelpers';
+import { CustomerAddress, CustomerAddressModelView, CustomerAddressRequest } from 'src/types/user.type';
 import { ProvinceDistrict, Ward } from 'src/types/AddressModels.type';
-import { isNumber } from 'src/utils/numberUtils';
 import { toast } from 'react-toastify';
 import {
   Box,
@@ -34,18 +27,21 @@ import {
 import TypographyCus, { TEXTSIZE } from 'src/components/PosTypography/TypographyCus';
 import CloseIcon from 'src/assets/svg/CloseIcon';
 import PosCheckbox from 'src/components/checkbox/PosCheckbox';
+import { useMutation } from '@tanstack/react-query';
+import addressApi from 'src/api/address.api';
+import { mapCustomerAddressResponseToView } from 'src/helpers/addressHelper';
 
 interface PopupAddressProps {
   open: boolean;
-  customer?: CustomerAddress;
+  address?: CustomerAddress;
   setOpen: Dispatch<SetStateAction<boolean>>;
   isCreate?: boolean;
+  onClosed?: () => void;
 }
 
 const PopupAddress = (props: PopupAddressProps) => {
-  const { customer, open, isCreate, setOpen } = props;
-  const [isShowAdvance, setIsShowAdvance] = useState<boolean>(false);
-  const [btnOkLoading, setBtnOkLoading] = useState(false);
+  const classes = useStyles();
+  const { address, open, isCreate, setOpen, onClosed } = props;
   const [initialValues, setInitValues] = useState<CustomerAddressModelView>({});
   const {
     control,
@@ -63,50 +59,13 @@ const PopupAddress = (props: PopupAddressProps) => {
     resolver: yupResolver<any>(handleValidateCustomer())
   });
 
-  const mapCustomerAddressResponseToView = (customer: CustomerAddress) => {
-    return {
-      id: customer.id,
-      phone: customer.phone,
-      customerName: customer.customerName,
-      isDefault: customer.isDefault,
-      address: customer.address ? customer.address : undefined,
-      provinceDistrict: mapProvinceDistrict(customer),
-      ward: mapWard(customer)
-    } as CustomerAddressModelView;
-  };
-
-  const mapProvinceDistrict = (addressResponse: CustomerAddress) => {
-    if (addressResponse.province) {
-      return {
-        id:
-          addressResponse.provinceCode && addressResponse.districtCode
-            ? addressResponse.provinceCode + ' - ' + addressResponse.districtCode
-            : null,
-        province_id: Number(addressResponse.provinceCode),
-        province_name: addressResponse.province,
-        district_id: Number(addressResponse.districtCode),
-        district_name: addressResponse.district
-      } as ProvinceDistrict;
-    } else {
-      return undefined;
-    }
-  };
-  const mapWard = (addressResponse: CustomerAddress) => {
-    return {
-      id: Number(addressResponse.wardCode),
-      name: addressResponse.ward,
-      code: addressResponse.wardCode,
-      district_id: Number(addressResponse.districtCode),
-      province_id: Number(addressResponse.provinceCode),
-      district_code: addressResponse.districtCode
-    } as Ward;
-  };
-
   useEffect(() => {
-    if (customer) {
-      reset(mapCustomerAddressResponseToView(customer));
+    if (address) {
+      reset(mapCustomerAddressResponseToView(address));
+    } else {
+      reset({});
     }
-  }, [open, customer]);
+  }, [open, address]);
 
   const onInvalid = (error: any) => {
     toast.error(error[Object.keys(error)[0]].message);
@@ -138,86 +97,46 @@ const PopupAddress = (props: PopupAddressProps) => {
     return customerRequest;
   };
 
+  const addAddress = useMutation({
+    mutationFn: addressApi.addAddress,
+    onSuccess: (data) => {
+      toast.success(data.data.message, { autoClose: 1000 });
+    },
+    onError: (error) => {
+      toast.error('Có lỗi trong quá trình thêm đạ chỉ');
+    }
+  });
+
+  const updateAddress = useMutation({
+    mutationFn: addressApi.updateAddress,
+    onSuccess: (data) => {
+      toast.success(data.data.message, { autoClose: 1000 });
+    },
+    onError: (error) => {
+      toast.error('Có lỗi trong quá trình cập nhật địa chỉ');
+    }
+  });
+
   const handleCreate = async (values: CustomerAddressModelView) => {
     const req = mapToCustomerAddressRequest(values);
-    console.log('req', req);
-    //   setBtnOkLoading(true);
-    //   try {
-    //     const customerRes = isOfflineMode
-    //       ? await createCustomer(values, true)
-    //       : (await CustomerApiService.addCustomer(req)).data.customer;
-    //     if (customerRes && customerRes) {
-    //       dispatch(
-    //         setCustomer({
-    //           tabId: currentTab,
-    //           customer: customerRes
-    //         })
-    //       );
-    //       handleClose();
-    //       SnackbarUtils.success('Thêm mới khách hàng thành công');
-    //     }
-    //   } catch (error) {
-    //     SnackbarUtils.error(getCustomerError(error));
-    //   } finally {
-    //     setBtnOkLoading(false);
-    //   }
+    await addAddress.mutateAsync(req);
+    setOpen(false);
+    if (onClosed) {
+      onClosed();
+    }
   };
 
   const handleUpdate = async (values: CustomerAddressModelView) => {
-    // if (values.id) {
-    //   setBtnOkLoading(true);
-    //   const req = mapToCusomerRequest(values);
-    //   try {
-    //     if (isOfflineMode) {
-    //       const customerRes = await createCustomer(values, false);
-    //       dispatch(
-    //         setCustomer({
-    //           tabId: currentTab,
-    //           customer: customerRes
-    //         })
-    //       );
-    //       handleClose();
-    //       SnackbarUtils.success('Cập nhật khách hàng thành công');
-    //       setBtnOkLoading(false);
-    //       return;
-    //     }
-    //     let customerAddress: CustomerAddress = {};
-    //     const customerRes = await CustomerApiService.updateCustomer(req);
-    //     //
-    //     if (values.addresses && values.addresses.id) {
-    //       const addressRes = await CustomerApiService.updateAddressCustomer(
-    //         req.addresses ? req.addresses[0] : {},
-    //         customer.id
-    //       );
-    //       customerAddress = addressRes.data.address;
-    //     } else if (req.addresses) {
-    //       const addressRes = await CustomerApiService.addAddressCustomer(
-    //         req.addresses ? req.addresses[0] : {},
-    //         customer.id
-    //       );
-    //       customerAddress = addressRes.data.address;
-    //     }
-    //     if (customerRes && customerRes.data.customer) {
-    //       customerRes.data.customer.addresses[0] = customerAddress;
-    //       customerRes.data.customer.defaultAddress = customerAddress;
-    //       dispatch(
-    //         setCustomer({
-    //           tabId: currentTab,
-    //           customer: customerRes.data.customer
-    //         })
-    //       );
-    //       handleClose();
-    //       SnackbarUtils.success('Cập nhật khách hàng thành công');
-    //     }
-    //   } catch (error) {
-    //     SnackbarUtils.error(getCustomerError(error));
-    //   } finally {
-    //     setBtnOkLoading(false);
-    //   }
-    // } else {
-    // }
+    if (values.id) {
+      const req = mapToCustomerAddressRequest(values);
+      await updateAddress.mutateAsync({ id: values.id, payload: req });
+      setOpen(false);
+      if (onClosed) {
+        onClosed();
+      }
+    }
   };
-  const classes = useStyles();
+
   return (
     <Dialog
       open={open}
@@ -240,7 +159,7 @@ const PopupAddress = (props: PopupAddressProps) => {
         <Grid container style={{ gap: '0 0' }}>
           <Grid item xs={12} className={classes.contentItem}>
             <Box className={classes.title}>
-              <TypographyCus size={TEXTSIZE.size14} textColor={'#333'}>
+              <TypographyCus size={TEXTSIZE.size12} textColor={'#79808A'}>
                 Họ và tên
               </TypographyCus>
             </Box>
@@ -251,7 +170,6 @@ const PopupAddress = (props: PopupAddressProps) => {
                   required
                   error={!!errors.customerName}
                   helperText={errors?.customerName?.message}
-                  label='Họ và tên'
                   fullWidth
                   size='small'
                   variant={'outlined'}
@@ -263,7 +181,7 @@ const PopupAddress = (props: PopupAddressProps) => {
           </Grid>
           <Grid item xs={12} className={classes.contentItem}>
             <Box className={classes.title}>
-              <TypographyCus size={TEXTSIZE.size14} textColor={'#333'}>
+              <TypographyCus size={TEXTSIZE.size12} textColor={'#79808A'}>
                 Điện thoại
               </TypographyCus>
             </Box>
@@ -274,7 +192,6 @@ const PopupAddress = (props: PopupAddressProps) => {
                   required
                   error={!!errors.phone}
                   helperText={errors?.phone?.message}
-                  label='Điện thoại'
                   fullWidth
                   size='small'
                   variant={'outlined'}
@@ -287,7 +204,7 @@ const PopupAddress = (props: PopupAddressProps) => {
 
           <Grid item xs={12} className={classes.contentItem}>
             <Box className={classes.title}>
-              <TypographyCus size={TEXTSIZE.size14} textColor={'#333'}>
+              <TypographyCus size={TEXTSIZE.size12} textColor={'#79808A'}>
                 Địa chỉ
               </TypographyCus>
             </Box>
@@ -298,7 +215,6 @@ const PopupAddress = (props: PopupAddressProps) => {
                   required
                   error={!!errors.address}
                   helperText={errors?.address?.message}
-                  label='Địa chỉ'
                   fullWidth
                   size='small'
                   variant={'outlined'}
@@ -335,27 +251,6 @@ const PopupAddress = (props: PopupAddressProps) => {
               }}
               fetchOption
             />
-          </Grid>
-          <Grid item xs={6} className={classes.contentItem}>
-            {/* <Controller
-              render={({ field }) => (
-                <TextInput
-                  {...field}
-                  required
-                  error={!!errors.gender}
-                  helperText={errors?.gender?.message}
-                  textLabel="Giới tính"
-                  labelColor={colors.text[70]}
-                  lablelTextSize={TEXTSIZE.size14}
-                  fullWidth
-                  size="small"
-                  width={"100%"}
-                  variant={"outlined"}
-                />
-              )}
-              control={control}
-              name="gender"
-            /> */}
           </Grid>
           <Grid item xs={12} className={classes.contentItem}>
             <FormControlLabel

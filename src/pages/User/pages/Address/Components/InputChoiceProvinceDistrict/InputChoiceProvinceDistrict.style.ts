@@ -3,7 +3,9 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme: Theme) => {
   return {
-    root: {},
+    root: {
+      marginBottom: 16
+    },
     title: {
       marginBottom: 4
     },

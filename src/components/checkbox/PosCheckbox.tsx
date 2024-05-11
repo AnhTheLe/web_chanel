@@ -1,10 +1,10 @@
-import React, { memo } from "react";
-import { connect, ConnectedProps } from "react-redux";
+import React, { memo } from 'react';
+import { connect, ConnectedProps } from 'react-redux';
 import { Checkbox, CheckboxProps } from '@mui/material';
 
-import { AppState } from "../../store";
-import UnCheckedIcon from "src/assets/svg/UnCheckedIcon";
-import CheckedIcon from "src/assets/svg/CheckedIcon";
+import { AppState } from '../../store';
+import UnCheckedIcon from 'src/assets/svg/UnCheckedIcon';
+import CheckedIcon from 'src/assets/svg/CheckedIcon';
 
 interface PosCheckboxProps extends PropsFromRedux, CheckboxProps {
   style?: any;
@@ -27,7 +27,7 @@ const PosCheckBox = React.forwardRef(function PosCheckBox(props: PosCheckboxProp
 PosCheckBox.displayName = 'PosCheckBox';
 
 const mapStateToProps = (state: AppState) => ({
-  theme: state.theme,
+  theme: state.theme
 });
 
 const connector = connect(mapStateToProps);

@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
 import React, { useContext, useEffect, useMemo } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Button from 'src/components/Button';
 import { Purchase } from 'src/types/purchase.type';
 import { generateNameId } from 'src/utils/utils';
@@ -64,6 +64,8 @@ export default function ShoppingCart() {
       }, 0),
     [checkedPurchases]
   );
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setExtendedPurchases((prev) => {
@@ -135,13 +137,7 @@ export default function ShoppingCart() {
   };
 
   const handleBuyPurchases = () => {
-    if (checkedPurchases.length > 0) {
-      const body = checkedPurchases.map((purchase) => ({
-        productId: purchase.variant.id,
-        quantity: purchase.quantity
-      }));
-      buyProductsMutation.mutate(body);
-    }
+    navigate(path.checkout);
   };
 
   return (
