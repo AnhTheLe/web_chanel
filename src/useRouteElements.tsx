@@ -17,11 +17,13 @@ import CheckoutPage from './pages/Checkout/CheckoutPage';
 import UserLayout from './pages/User/layouts/UserLayout';
 import ChangePassword from './pages/User/pages/ChangePassword';
 import Address from './pages/User/pages/Address/Address';
+import HistoryPurchase from './pages/User/pages/HistoryPurchase';
+import DetailPurchase from './pages/User/pages/DetailPurchase/DetailPurchase';
 
 // const isAuthenticated = true;
 function ProtectedRoute() {
   const { isAuthenticated } = useContext(AppContext);
-  return isAuthenticated ? <MainLayout></MainLayout> : <Navigate to='/login' />;
+  return isAuthenticated ? <MainLayout></MainLayout> : <Navigate to='/account/login' />;
 }
 
 function RejectedRoute() {
@@ -126,15 +128,23 @@ export default function useRouteElements() {
                   <Address />
                 </Suspense>
               )
+            },
+            {
+              path: path.historyPurchase,
+              element: (
+                <Suspense>
+                  <HistoryPurchase />
+                </Suspense>
+              )
+            },
+            {
+              path: path.detailPurchase,
+              element: (
+                <Suspense>
+                  <DetailPurchase />
+                </Suspense>
+              )
             }
-            // {
-            //   path: path.historyPurchase,
-            //   element: (
-            //     <Suspense>
-            //       <HistoryPurchase />
-            //     </Suspense>
-            //   )
-            // }
           ]
         },
         {

@@ -61,6 +61,12 @@ const CheckoutPage = () => {
         position: 'top-center',
         autoClose: 1000
       });
+    },
+    onError: (data: Error) => {
+      toast.error((data as any)?.response?.data.message, {
+        position: 'top-center',
+        autoClose: 1000
+      });
     }
   });
 
@@ -125,17 +131,21 @@ const CheckoutPage = () => {
     [checkedPurchases, promotionCoupon] // Add a comma here
   );
   const totalCheckedPurchaseSavingPrice = useMemo(() => {
-    const totalDiscount = checkedPurchases.reduce((result, current) => {
-      return result + (current.variant.discountedPrice - current.variant.retailPrice) * current.quantity;
+    // const totalDiscount = checkedPurchases.reduce((result, current) => {
+    //   return result + current.variant.discount * current.quantity;
+    // }, 0);
+
+    const total = checkedPurchases.reduce((result, current) => {
+      return result + current.variant.discountedPrice * current.quantity;
     }, 0);
     const totalDiscountCoupon = promotionCoupon
       ? promotionCoupon?.valueType === 'PERCENTAGE'
-        ? (totalCheckedPurchasePrice * promotionCoupon?.value) / 100
+        ? (total * promotionCoupon?.value) / 100
         : promotionCoupon?.value
       : 0;
 
-    return totalDiscount + totalDiscountCoupon;
-  }, [checkedPurchases, promotionCoupon, totalCheckedPurchasePrice]);
+    return totalDiscountCoupon;
+  }, [checkedPurchases, promotionCoupon]);
 
   const [addressSelected, setAddressSelected] = useState<CustomerAddress>(defaultAddress || emptyAddress);
 
@@ -221,10 +231,15 @@ const CheckoutPage = () => {
       customerName: data.name ?? profile?.name,
       customerId: profile?.id,
       paymentMethod: paymentMethod,
-      discount: totalCheckedPurchaseSavingPrice ?? 0,
+      discount: Math.abs(totalCheckedPurchaseSavingPrice ?? 0),
       orderVariantList: checkedPurchases.map((purchase) => {
-        return { variantId: purchase.variant.id, quantity: purchase.quantity } as OrderVariant;
-      })
+        return {
+          variantId: purchase.variant.id,
+          quantity: purchase.quantity,
+          discountPerItem: purchase.variant.discount ?? 0
+        } as OrderVariant;
+      }),
+      shippingFee: 40000
     } as unknown as CreateOrderRequest;
     console.log('orderData', orderData);
     createOrderMutation.mutateAsync(orderData);
