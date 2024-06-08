@@ -14,12 +14,13 @@ import { useQuery } from '@tanstack/react-query';
 import { formatPriceWithVNDCurrency } from 'src/utils/priceUtils';
 import noproduct from 'src/assets/img/no-product.png';
 import path from 'src/constants/path';
+import { clearLS } from 'src/utils/auth';
 
 const MAX_PURCHASES = 10;
 
 export default function Header() {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-  const { isAuthenticated } = useContext(AppContext);
+  const { isAuthenticated, reset } = useContext(AppContext);
   const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -55,6 +56,10 @@ export default function Header() {
 
   const open = Boolean(anchorEl);
 
+  const handleClickLogout = () => {
+    reset();
+    clearLS();
+  };
   const navigate = useNavigate();
   return (
     <Grid container direction='row' justifyContent='center' alignItems='center'>
@@ -140,6 +145,9 @@ export default function Header() {
                       sx={{ fontSize: 14 }}
                     >
                       Tài khoản
+                    </NavButton>
+                    <NavButton variant='text' disableRipple onClick={handleClickLogout} sx={{ fontSize: 14 }}>
+                      Đăng xuất
                     </NavButton>
                   </Box>
                 ) : (

@@ -5,27 +5,27 @@ const useStyles = makeStyles((theme: Theme) => {
   return {
     root: {
       borderRadius: 8,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       backgroundColor: theme.palette.customColors.background.white,
       border: `1px solid ${theme.palette.customColors.ink[10]}`,
-      overflow: "hidden",
+      overflow: 'hidden'
       // "& svg": {
       //   maxWidth: 46,
       //   maxHeight: 46,
       // },
     },
     popup: {
-      zIndex: 2000,
+      zIndex: 2000
     },
     popImage: {
-      width: "216px",
-      height: "216px",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    },
+      width: '216px',
+      height: '216px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }
   };
 });
 export default useStyles;

@@ -1,3 +1,3 @@
-import UserLayout from './UserLayout'
+import UserLayout from './UserLayout';
 
-export default UserLayout
+export default UserLayout;

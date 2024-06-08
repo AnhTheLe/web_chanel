@@ -11,6 +11,8 @@ interface AppContextInterface {
   extendedPurchases: ExtendedPurchase[];
   setExtendedPurchases: React.Dispatch<React.SetStateAction<ExtendedPurchase[]>>;
   reset: () => void;
+  searchKeyWordHeader: string;
+  setSearchKeyWordHeader: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const getInitialAppContext: () => AppContextInterface = () => ({
@@ -20,7 +22,9 @@ export const getInitialAppContext: () => AppContextInterface = () => ({
   setProfile: () => null,
   extendedPurchases: [],
   setExtendedPurchases: () => null,
-  reset: () => null
+  reset: () => null,
+  searchKeyWordHeader: '',
+  setSearchKeyWordHeader: () => null
 });
 
 const initialAppContext = getInitialAppContext();
@@ -37,14 +41,13 @@ export const AppProvider = ({
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(defaultValue.isAuthenticated);
   const [extendedPurchases, setExtendedPurchases] = useState<ExtendedPurchase[]>(defaultValue.extendedPurchases);
   const [profile, setProfile] = useState<User | null>(defaultValue.profile);
-  console.log('isAuthenticated', isAuthenticated);
+  const [searchKeyWordHeader, setSearchKeyWordHeader] = useState<string>('');
 
   const reset = () => {
     setIsAuthenticated(false);
     setExtendedPurchases([]);
     setProfile(null);
   };
-
 
   return (
     <AppContext.Provider
@@ -55,7 +58,9 @@ export const AppProvider = ({
         setProfile,
         extendedPurchases,
         setExtendedPurchases,
-        reset
+        reset,
+        searchKeyWordHeader,
+        setSearchKeyWordHeader
       }}
     >
       {children}

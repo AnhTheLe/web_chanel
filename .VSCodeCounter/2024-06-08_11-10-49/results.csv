@@ -1,0 +1,194 @@
+"filename", "language", "JSON", "Ignore", "JavaScript", "JSON with Comments", "Properties", "Markdown", "HTML", "CSS", "TypeScript", "TypeScript JSX", "SCSS", "XML", "comment", "blank", "total"
+"d:\2023_2\DATN\web_page\.env", "Properties", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3
+"d:\2023_2\DATN\web_page\.eslintrc.cjs", "JavaScript", 0, 0, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 2, 63
+"d:\2023_2\DATN\web_page\.prettierignore", "Ignore", 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2
+"d:\2023_2\DATN\web_page\.prettierrc", "JSON", 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11
+"d:\2023_2\DATN\web_page\README.md", "Markdown", 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"d:\2023_2\DATN\web_page\index.html", "HTML", 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 1, 14
+"d:\2023_2\DATN\web_page\package.json", "JSON", 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 81
+"d:\2023_2\DATN\web_page\postcss.config.js", "JavaScript", 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"d:\2023_2\DATN\web_page\public\vite.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"d:\2023_2\DATN\web_page\src\App.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 37, 0, 0, 0, 0, 0, 9, 46
+"d:\2023_2\DATN\web_page\src\App.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 0, 0, 0, 4, 33
+"d:\2023_2\DATN\web_page\src\api\AddressApiService.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 36, 0, 0, 0, 1, 5, 42
+"d:\2023_2\DATN\web_page\src\api\Address\districts.json", "JSON", 860, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 861
+"d:\2023_2\DATN\web_page\src\api\Address\province.json", "JSON", 380, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 381
+"d:\2023_2\DATN\web_page\src\api\Address\regions.json", "JSON", 814, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 815
+"d:\2023_2\DATN\web_page\src\api\Address\wards.json", "JSON", 92442, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 92443
+"d:\2023_2\DATN\web_page\src\api\address.api.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 4, 23
+"d:\2023_2\DATN\web_page\src\api\auth.api.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 3, 26
+"d:\2023_2\DATN\web_page\src\api\blog.api.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 3, 27
+"d:\2023_2\DATN\web_page\src\api\order.api.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 3, 18
+"d:\2023_2\DATN\web_page\src\api\product.api.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 3, 24
+"d:\2023_2\DATN\web_page\src\api\promotion.api.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 3, 12
+"d:\2023_2\DATN\web_page\src\api\shoppingCart.api.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 4, 28
+"d:\2023_2\DATN\web_page\src\api\user.api.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 4, 27
+"d:\2023_2\DATN\web_page\src\assets\react.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"d:\2023_2\DATN\web_page\src\assets\svg\ArrowDownIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 1, 5, 36
+"d:\2023_2\DATN\web_page\src\assets\svg\ArrowDropDownIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 4, 21
+"d:\2023_2\DATN\web_page\src\assets\svg\ArrowLeftDoubleIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 5, 25
+"d:\2023_2\DATN\web_page\src\assets\svg\ArrowLeftIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0, 0, 5, 23
+"d:\2023_2\DATN\web_page\src\assets\svg\ArrowRightIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 5, 29
+"d:\2023_2\DATN\web_page\src\assets\svg\BagCartIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 5, 22
+"d:\2023_2\DATN\web_page\src\assets\svg\CartIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 0, 0, 0, 2, 39
+"d:\2023_2\DATN\web_page\src\assets\svg\CheckedIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 5, 25
+"d:\2023_2\DATN\web_page\src\assets\svg\CloseIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0, 0, 5, 23
+"d:\2023_2\DATN\web_page\src\assets\svg\CommentIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 0, 5, 35
+"d:\2023_2\DATN\web_page\src\assets\svg\DiscountIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 2, 14
+"d:\2023_2\DATN\web_page\src\assets\svg\EmailIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 0, 0, 5, 36
+"d:\2023_2\DATN\web_page\src\assets\svg\EmailSmallIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 5, 31
+"d:\2023_2\DATN\web_page\src\assets\svg\FacebookIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 5, 31
+"d:\2023_2\DATN\web_page\src\assets\svg\IconImage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 0, 0, 0, 2, 31
+"d:\2023_2\DATN\web_page\src\assets\svg\InstagramIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0, 0, 5, 39
+"d:\2023_2\DATN\web_page\src\assets\svg\LoadingIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0, 0, 5, 23
+"d:\2023_2\DATN\web_page\src\assets\svg\LocationIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 5, 31
+"d:\2023_2\DATN\web_page\src\assets\svg\MapsicoIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 5, 32
+"d:\2023_2\DATN\web_page\src\assets\svg\MessIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0, 0, 5, 39
+"d:\2023_2\DATN\web_page\src\assets\svg\PhoneIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 5, 31
+"d:\2023_2\DATN\web_page\src\assets\svg\SearchIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 0, 3, 18
+"d:\2023_2\DATN\web_page\src\assets\svg\SignOutIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0, 0, 5, 23
+"d:\2023_2\DATN\web_page\src\assets\svg\SuccessIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 5, 31
+"d:\2023_2\DATN\web_page\src\assets\svg\UnCheckedIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 7, 34
+"d:\2023_2\DATN\web_page\src\assets\svg\UserIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 5, 32
+"d:\2023_2\DATN\web_page\src\assets\svg\YoutubeIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 5, 31
+"d:\2023_2\DATN\web_page\src\assets\user.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"d:\2023_2\DATN\web_page\src\components\Button\Button.stories.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 7, 42
+"d:\2023_2\DATN\web_page\src\components\Button\Button.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 0, 0, 3, 34
+"d:\2023_2\DATN\web_page\src\components\Button\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\components\Footer\Footer.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 3, 22
+"d:\2023_2\DATN\web_page\src\components\Footer\Footer.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 136, 0, 0, 3, 6, 145
+"d:\2023_2\DATN\web_page\src\components\Footer\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\components\Header\Header.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 3, 15
+"d:\2023_2\DATN\web_page\src\components\Header\Header.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 263, 0, 0, 1, 12, 276
+"d:\2023_2\DATN\web_page\src\components\Header\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\components\InfiniteScroll\InfiniteScroll .tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 0, 0, 1, 7, 45
+"d:\2023_2\DATN\web_page\src\components\InputFile\InputFile.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 44, 0, 0, 1, 5, 50
+"d:\2023_2\DATN\web_page\src\components\InputFile\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\components\InputNumber\InputNumber.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 2, 5, 47
+"d:\2023_2\DATN\web_page\src\components\InputNumber\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 6
+"d:\2023_2\DATN\web_page\src\components\Input\Input.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 75, 0, 0, 1, 7, 83
+"d:\2023_2\DATN\web_page\src\components\Input\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\components\Popover\Popover.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 76, 0, 0, 2, 7, 85
+"d:\2023_2\DATN\web_page\src\components\Popover\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\components\PosImage\PosImage.style.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 4, 2, 32
+"d:\2023_2\DATN\web_page\src\components\PosImage\PosImage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 77, 0, 0, 6, 10, 93
+"d:\2023_2\DATN\web_page\src\components\PosTypography\PosTypography.style.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 0, 1, 3, 19
+"d:\2023_2\DATN\web_page\src\components\PosTypography\TypographyCus.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 109, 0, 0, 0, 10, 119
+"d:\2023_2\DATN\web_page\src\components\QuantityController\QuantityController.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 94, 0, 0, 0, 7, 101
+"d:\2023_2\DATN\web_page\src\components\QuantityController\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\components\RegisterHeader\RegisterHeader.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 2, 21
+"d:\2023_2\DATN\web_page\src\components\RegisterHeader\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\components\checkbox copy\PosCheckbox.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 0, 0, 0, 4, 26
+"d:\2023_2\DATN\web_page\src\components\checkbox\PosCheckbox.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 0, 0, 5, 36
+"d:\2023_2\DATN\web_page\src\components\dropdown\Dropdown.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 274, 0, 0, 7, 18, 299
+"d:\2023_2\DATN\web_page\src\components\searchSuggest\SearchSuggest.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 149, 0, 0, 10, 4, 163
+"d:\2023_2\DATN\web_page\src\components\searchSuggest\SearchSuggest.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 167, 0, 0, 8, 15, 190
+"d:\2023_2\DATN\web_page\src\components\textInput\TextInput.style.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 62, 0, 0, 0, 0, 5, 67
+"d:\2023_2\DATN\web_page\src\components\textInput\TextInput.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 0, 0, 2, 8, 70
+"d:\2023_2\DATN\web_page\src\constants\config.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 2, 7
+"d:\2023_2\DATN\web_page\src\constants\httpStatusCodeEnnum.enum.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 66, 0, 0, 0, 0, 2, 68
+"d:\2023_2\DATN\web_page\src\constants\path.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 2, 18
+"d:\2023_2\DATN\web_page\src\contexts\app.context.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 0, 0, 0, 8, 70
+"d:\2023_2\DATN\web_page\src\helpers\addressHelper.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 39, 0, 0, 0, 0, 3, 42
+"d:\2023_2\DATN\web_page\src\helpers\appAuthHelpers.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 2, 10
+"d:\2023_2\DATN\web_page\src\index.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 2, 13
+"d:\2023_2\DATN\web_page\src\layouts\MainLayout\MainLayout.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 2, 18
+"d:\2023_2\DATN\web_page\src\layouts\MainLayout\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\layouts\RegisterLayout\RegisterLayout.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 0, 2, 17
+"d:\2023_2\DATN\web_page\src\layouts\RegisterLayout\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\main.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 1, 3, 28
+"d:\2023_2\DATN\web_page\src\pages\Blogs\Blogs.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 42, 0, 0, 2, 5, 49
+"d:\2023_2\DATN\web_page\src\pages\Blogs\components\BlogItem.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 0, 0, 0, 4, 66
+"d:\2023_2\DATN\web_page\src\pages\Checkout\CheckoutPage.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 157, 0, 0, 10, 5, 172
+"d:\2023_2\DATN\web_page\src\pages\Checkout\CheckoutPage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 592, 0, 0, 16, 44, 652
+"d:\2023_2\DATN\web_page\src\pages\Checkout\CheckoutValidate.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 1, 36
+"d:\2023_2\DATN\web_page\src\pages\Checkout\Components\VariantItems\VariantItem.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 0, 0, 0, 3, 173
+"d:\2023_2\DATN\web_page\src\pages\Checkout\Components\VariantItems\VariantItem.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 47, 0, 0, 0, 4, 51
+"d:\2023_2\DATN\web_page\src\pages\Checkout\Components\dropdownSearchOption\DropdownSearchOption.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 14, 3, 173
+"d:\2023_2\DATN\web_page\src\pages\Checkout\Components\dropdownSearchOption\DropdownSearchOption.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 199, 0, 0, 12, 11, 222
+"d:\2023_2\DATN\web_page\src\pages\Components\ItemProduct\ItemProduct.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 153, 0, 0, 15, 4, 172
+"d:\2023_2\DATN\web_page\src\pages\Components\ItemProduct\ItemProduct.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 162, 0, 0, 2, 14, 178
+"d:\2023_2\DATN\web_page\src\pages\HomePage\HomePage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 236, 0, 0, 12, 22, 270
+"d:\2023_2\DATN\web_page\src\pages\HomePage\Homepage.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 2, 13
+"d:\2023_2\DATN\web_page\src\pages\HomePage\components\DialogCart\CartDialog.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 2, 37
+"d:\2023_2\DATN\web_page\src\pages\HomePage\components\DialogCart\CartDialog.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 365, 0, 0, 0, 17, 382
+"d:\2023_2\DATN\web_page\src\pages\HomePage\components\ListSlideProducts\ListSlideProducts.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 0, 0, 5, 6, 79
+"d:\2023_2\DATN\web_page\src\pages\HomePage\components\ListSlideProducts\style.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 69, 0, 0, 11, 80
+"d:\2023_2\DATN\web_page\src\pages\HomePage\components\OutstandingBrand\OutstandingBrand.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 108, 0, 0, 5, 6, 119
+"d:\2023_2\DATN\web_page\src\pages\HomePage\components\OutstandingBrand\style.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 82, 0, 4, 16, 102
+"d:\2023_2\DATN\web_page\src\pages\HomePage\components\SectionReview\Components\ItemReview.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 2, 11
+"d:\2023_2\DATN\web_page\src\pages\HomePage\components\SectionReview\Components\ItemReview.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 36, 0, 0, 0, 5, 41
+"d:\2023_2\DATN\web_page\src\pages\HomePage\components\SectionReview\SectionReview.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 0, 0, 5, 7, 112
+"d:\2023_2\DATN\web_page\src\pages\HomePage\components\SectionReview\style.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 92, 0, 4, 16, 112
+"d:\2023_2\DATN\web_page\src\pages\HomePage\hocs\modal\ModalProvider.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 72, 0, 0, 1, 14, 87
+"d:\2023_2\DATN\web_page\src\pages\HomePage\hocs\modal\ModalStack.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 4, 17
+"d:\2023_2\DATN\web_page\src\pages\HomePage\hocs\modal\useModal.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 4, 10
+"d:\2023_2\DATN\web_page\src\pages\Login\Login.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 99, 0, 0, 4, 7, 110
+"d:\2023_2\DATN\web_page\src\pages\ProductDetail\ProductDetail.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 104, 0, 0, 4, 4, 112
+"d:\2023_2\DATN\web_page\src\pages\ProductDetail\ProductDetail.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 373, 0, 0, 11, 21, 405
+"d:\2023_2\DATN\web_page\src\pages\Products\Product.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 112, 0, 0, 3, 4, 119
+"d:\2023_2\DATN\web_page\src\pages\Products\Products.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 213, 0, 0, 2, 7, 222
+"d:\2023_2\DATN\web_page\src\pages\Products\hocs\useProductFilter.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 92, 0, 0, 3, 12, 107
+"d:\2023_2\DATN\web_page\src\pages\Register\Register.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 134, 0, 0, 15, 10, 159
+"d:\2023_2\DATN\web_page\src\pages\ShoppingCart\ShoppingCart.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 343, 0, 0, 1, 14, 358
+"d:\2023_2\DATN\web_page\src\pages\ShoppingCart\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\pages\User\components\DateSelect\DateSelect.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 83, 0, 0, 0, 5, 88
+"d:\2023_2\DATN\web_page\src\pages\User\components\DateSelect\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\pages\User\components\UserSideNav\UserSideNav.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 95, 0, 0, 0, 3, 98
+"d:\2023_2\DATN\web_page\src\pages\User\components\UserSideNav\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\pages\User\layouts\UserLayout\UserLayout.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0, 0, 2, 36
+"d:\2023_2\DATN\web_page\src\pages\User\layouts\UserLayout\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Address.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 0, 0, 0, 10, 69
+"d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\AddressItem\AddressItem.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 95, 0, 0, 8, 9, 112
+"d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\InputChoiceProvinceDistrict\InputChoiceProvinceDistrict.style.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 112, 0, 0, 0, 11, 2, 125
+"d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\InputChoiceProvinceDistrict\InputChoiceProvinceDistrict.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 173, 0, 0, 4, 11, 188
+"d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\InputChoiceWard\InputChoiceWard.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 0, 0, 2, 6, 66
+"d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\PopupCustomer\CustomerValidate.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 2, 37
+"d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\PopupCustomer\PopupAddress.style.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 41, 0, 0, 0, 0, 2, 43
+"d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\PopupCustomer\PopupAddress.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 278, 0, 0, 2, 19, 299
+"d:\2023_2\DATN\web_page\src\pages\User\pages\ChangePassword\ChangePassword.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 121, 0, 0, 0, 5, 126
+"d:\2023_2\DATN\web_page\src\pages\User\pages\ChangePassword\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\pages\User\pages\DetailPurchase\DetailPurchase.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 0, 0, 0, 3, 42
+"d:\2023_2\DATN\web_page\src\pages\User\pages\DetailPurchase\DetailPurchase.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 127, 0, 0, 0, 7, 134
+"d:\2023_2\DATN\web_page\src\pages\User\pages\HistoryPurchase\HistoryPurchase.style.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 3, 23
+"d:\2023_2\DATN\web_page\src\pages\User\pages\HistoryPurchase\HistoryPurchase.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 96, 0, 0, 0, 7, 103
+"d:\2023_2\DATN\web_page\src\pages\User\pages\HistoryPurchase\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\pages\User\pages\Profile\Profile.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 208, 0, 0, 15, 12, 235
+"d:\2023_2\DATN\web_page\src\pages\User\pages\Profile\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"d:\2023_2\DATN\web_page\src\responsive.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2
+"d:\2023_2\DATN\web_page\src\store\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 2
+"d:\2023_2\DATN\web_page\src\store\store.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 46, 0, 0, 0, 0, 11, 57
+"d:\2023_2\DATN\web_page\src\store\types.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 4, 26
+"d:\2023_2\DATN\web_page\src\theme\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 19, 4, 35
+"d:\2023_2\DATN\web_page\src\theme\material-ui.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 84, 0, 0, 0, 0, 6, 90
+"d:\2023_2\DATN\web_page\src\theme\slice.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 5, 24
+"d:\2023_2\DATN\web_page\src\theme\statics\colors.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 9, 16, 153
+"d:\2023_2\DATN\web_page\src\theme\themes.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 1, 2, 43
+"d:\2023_2\DATN\web_page\src\theme\types.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 3, 10
+"d:\2023_2\DATN\web_page\src\theme\typography.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 1, 5
+"d:\2023_2\DATN\web_page\src\types\AddressModels.type.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 39, 0, 0, 0, 0, 1, 40
+"d:\2023_2\DATN\web_page\src\types\Order.type.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 82, 0, 0, 0, 0, 10, 92
+"d:\2023_2\DATN\web_page\src\types\auth.type.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 3, 13
+"d:\2023_2\DATN\web_page\src\types\blog.type.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 4, 31
+"d:\2023_2\DATN\web_page\src\types\product.type.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0, 7, 70
+"d:\2023_2\DATN\web_page\src\types\promotion.type.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 2, 14
+"d:\2023_2\DATN\web_page\src\types\purchase.type.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 5, 18
+"d:\2023_2\DATN\web_page\src\types\role.type.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 1, 7
+"d:\2023_2\DATN\web_page\src\types\user.type.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 84, 0, 0, 0, 3, 6, 93
+"d:\2023_2\DATN\web_page\src\types\utils.type.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 1, 3, 21
+"d:\2023_2\DATN\web_page\src\useRouteElements.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 136, 0, 0, 38, 6, 180
+"d:\2023_2\DATN\web_page\src\utils\DefaultLoadingIcon.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 4, 21
+"d:\2023_2\DATN\web_page\src\utils\REGEX.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 1, 5
+"d:\2023_2\DATN\web_page\src\utils\auth.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 9, 33
+"d:\2023_2\DATN\web_page\src\utils\customerHelpers.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 72, 0, 0, 0, 0, 5, 77
+"d:\2023_2\DATN\web_page\src\utils\http.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 116, 0, 0, 0, 24, 7, 147
+"d:\2023_2\DATN\web_page\src\utils\numberUtils.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 1, 7
+"d:\2023_2\DATN\web_page\src\utils\priceUtils.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 93, 0, 0, 0, 0, 8, 101
+"d:\2023_2\DATN\web_page\src\utils\rules.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 117, 0, 0, 0, 1, 10, 128
+"d:\2023_2\DATN\web_page\src\utils\utils.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 47, 0, 0, 0, 2, 14, 63
+"d:\2023_2\DATN\web_page\src\vite-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+"d:\2023_2\DATN\web_page\tailwind.config.js", "JavaScript", 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 13
+"d:\2023_2\DATN\web_page\tsconfig.json", "JSON with Comments", 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 27
+"d:\2023_2\DATN\web_page\tsconfig.node.json", "JSON", 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"d:\2023_2\DATN\web_page\vite.config.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 6, 6, 60
+"Total", "-", 94597, 2, 69, 22, 3, 2, 13, 48, 1903, 8512, 243, 5, 363, 997, 106779

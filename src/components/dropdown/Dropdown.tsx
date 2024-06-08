@@ -8,6 +8,7 @@ import {
   MenuItem,
   Select as MuiSelect,
   SelectProps as MuiSelectProps,
+  SelectChangeEvent,
   Theme
 } from '@mui/material';
 import { isEmpty } from 'lodash';
@@ -71,10 +72,10 @@ const Dropdown = <T, M extends boolean = false>(props: DropdownProps<T, M>) => {
   };
 
   const handleChange = (event: SelectChangeEvent<NonNullable<M extends true ? T[] : T> | never[]>) => {
-    const selectedValue = event.target.value;
+    const selectedValue = event.target.value as NonNullable<M extends true ? T[] : T> | never[];
 
     if (multiple && Array.isArray(selectedValue)) {
-      const selectedItems = items.filter((item) => selectedValue.includes(idForItem(item)));
+      const selectedItems = items.filter((item) => selectedValue.includes(idForItem(item) as never));
       onChange?.(selectedItems as M extends true ? T[] : T);
       setIsSelectAll(checkIsSelectAll(selectedItems, items));
     } else {

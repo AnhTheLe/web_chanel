@@ -1,0 +1,314 @@
+Date : 2024-06-08 11:10:49
+Directory : d:\2023_2\DATN\web_page
+Total : 192 files,  105419 codes, 363 comments, 997 blanks, all 106779 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          7 |     94,597 |          0 |          6 |     94,603 |
+| TypeScript JSX     |         99 |      8,512 |        257 |        668 |      9,437 |
+| TypeScript         |         69 |      1,903 |         86 |        257 |      2,246 |
+| SCSS               |          3 |        243 |          8 |         43 |        294 |
+| JavaScript         |          3 |         69 |         10 |          4 |         83 |
+| CSS                |          3 |         48 |          0 |         13 |         61 |
+| JSON with Comments |          1 |         22 |          2 |          3 |         27 |
+| HTML               |          1 |         13 |          0 |          1 |         14 |
+| XML                |          3 |          5 |          0 |          1 |          6 |
+| Properties         |          1 |          3 |          0 |          0 |          3 |
+| Ignore             |          1 |          2 |          0 |          0 |          2 |
+| Markdown           |          1 |          2 |          0 |          1 |          3 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                             | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                |        192 |    105,419 |        363 |        997 |    106,779 |
+| . (Files)                                                                                                                        |         12 |        260 |         18 |         17 |        295 |
+| public                                                                                                                           |          1 |          1 |          0 |          0 |          1 |
+| src                                                                                                                              |        179 |    105,158 |        345 |        980 |    106,483 |
+| src (Files)                                                                                                                      |          7 |        237 |         40 |         27 |        304 |
+| src\api                                                                                                                          |         13 |     94,690 |          1 |         36 |     94,727 |
+| src\api (Files)                                                                                                                  |          9 |        194 |          1 |         32 |        227 |
+| src\api\Address                                                                                                                  |          4 |     94,496 |          0 |          4 |     94,500 |
+| src\assets                                                                                                                       |         29 |        663 |          1 |        126 |        790 |
+| src\assets (Files)                                                                                                               |          2 |          4 |          0 |          1 |          5 |
+| src\assets\svg                                                                                                                   |         27 |        659 |          1 |        125 |        785 |
+| src\components                                                                                                                   |         33 |      1,892 |         49 |        177 |      2,118 |
+| src\components\Button                                                                                                            |          3 |         68 |          0 |         12 |         80 |
+| src\components\Footer                                                                                                            |          3 |        157 |          3 |         11 |        171 |
+| src\components\Header                                                                                                            |          3 |        277 |          1 |         17 |        295 |
+| src\components\InfiniteScroll                                                                                                    |          1 |         37 |          1 |          7 |         45 |
+| src\components\Input                                                                                                             |          2 |         77 |          1 |          9 |         87 |
+| src\components\InputFile                                                                                                         |          2 |         46 |          1 |          7 |         54 |
+| src\components\InputNumber                                                                                                       |          2 |         43 |          2 |          8 |         53 |
+| src\components\Popover                                                                                                           |          2 |         78 |          2 |          9 |         89 |
+| src\components\PosImage                                                                                                          |          2 |        103 |         10 |         12 |        125 |
+| src\components\PosTypography                                                                                                     |          2 |        124 |          1 |         13 |        138 |
+| src\components\QuantityController                                                                                                |          2 |         96 |          0 |          9 |        105 |
+| src\components\RegisterHeader                                                                                                    |          2 |         21 |          0 |          4 |         25 |
+| src\components\checkbox                                                                                                          |          1 |         31 |          0 |          5 |         36 |
+| src\components\checkbox copy                                                                                                     |          1 |         22 |          0 |          4 |         26 |
+| src\components\dropdown                                                                                                          |          1 |        274 |          7 |         18 |        299 |
+| src\components\searchSuggest                                                                                                     |          2 |        316 |         18 |         19 |        353 |
+| src\components\textInput                                                                                                         |          2 |        122 |          2 |         13 |        137 |
+| src\constants                                                                                                                    |          3 |         87 |          0 |          6 |         93 |
+| src\contexts                                                                                                                     |          1 |         62 |          0 |          8 |         70 |
+| src\helpers                                                                                                                      |          2 |         47 |          0 |          5 |         52 |
+| src\layouts                                                                                                                      |          4 |         35 |          0 |          8 |         43 |
+| src\layouts\MainLayout                                                                                                           |          2 |         18 |          0 |          4 |         22 |
+| src\layouts\RegisterLayout                                                                                                       |          2 |         17 |          0 |          4 |         21 |
+| src\pages                                                                                                                        |         58 |      6,235 |        192 |        433 |      6,860 |
+| src\pages\Blogs                                                                                                                  |          2 |        104 |          2 |          9 |        115 |
+| src\pages\Blogs (Files)                                                                                                          |          1 |         42 |          2 |          5 |         49 |
+| src\pages\Blogs\components                                                                                                       |          1 |         62 |          0 |          4 |         66 |
+| src\pages\Checkout                                                                                                               |          7 |      1,356 |         52 |         71 |      1,479 |
+| src\pages\Checkout (Files)                                                                                                       |          3 |        784 |         26 |         50 |        860 |
+| src\pages\Checkout\Components                                                                                                    |          4 |        572 |         26 |         21 |        619 |
+| src\pages\Checkout\Components\VariantItems                                                                                       |          2 |        217 |          0 |          7 |        224 |
+| src\pages\Checkout\Components\dropdownSearchOption                                                                               |          2 |        355 |         26 |         14 |        395 |
+| src\pages\Components                                                                                                             |          2 |        315 |         17 |         18 |        350 |
+| src\pages\Components\ItemProduct                                                                                                 |          2 |        315 |         17 |         18 |        350 |
+| src\pages\HomePage                                                                                                               |         15 |      1,302 |         36 |        134 |      1,472 |
+| src\pages\HomePage (Files)                                                                                                       |          2 |        247 |         12 |         24 |        283 |
+| src\pages\HomePage\components                                                                                                    |         10 |        964 |         23 |         88 |      1,075 |
+| src\pages\HomePage\components\DialogCart                                                                                         |          2 |        400 |          0 |         19 |        419 |
+| src\pages\HomePage\components\ListSlideProducts                                                                                  |          2 |        137 |          5 |         17 |        159 |
+| src\pages\HomePage\components\OutstandingBrand                                                                                   |          2 |        190 |          9 |         22 |        221 |
+| src\pages\HomePage\components\SectionReview                                                                                      |          4 |        237 |          9 |         30 |        276 |
+| src\pages\HomePage\components\SectionReview (Files)                                                                              |          2 |        192 |          9 |         23 |        224 |
+| src\pages\HomePage\components\SectionReview\Components                                                                           |          2 |         45 |          0 |          7 |         52 |
+| src\pages\HomePage\hocs                                                                                                          |          3 |         91 |          1 |         22 |        114 |
+| src\pages\HomePage\hocs\modal                                                                                                    |          3 |         91 |          1 |         22 |        114 |
+| src\pages\Login                                                                                                                  |          1 |         99 |          4 |          7 |        110 |
+| src\pages\ProductDetail                                                                                                          |          2 |        477 |         15 |         25 |        517 |
+| src\pages\Products                                                                                                               |          3 |        417 |          8 |         23 |        448 |
+| src\pages\Products (Files)                                                                                                       |          2 |        325 |          5 |         11 |        341 |
+| src\pages\Products\hocs                                                                                                          |          1 |         92 |          3 |         12 |        107 |
+| src\pages\Register                                                                                                               |          1 |        134 |         15 |         10 |        159 |
+| src\pages\ShoppingCart                                                                                                           |          2 |        345 |          1 |         16 |        362 |
+| src\pages\User                                                                                                                   |         23 |      1,686 |         42 |        120 |      1,848 |
+| src\pages\User\components                                                                                                        |          4 |        182 |          0 |         12 |        194 |
+| src\pages\User\components\DateSelect                                                                                             |          2 |         85 |          0 |          7 |         92 |
+| src\pages\User\components\UserSideNav                                                                                            |          2 |         97 |          0 |          5 |        102 |
+| src\pages\User\layouts                                                                                                           |          2 |         36 |          0 |          4 |         40 |
+| src\pages\User\layouts\UserLayout                                                                                                |          2 |         36 |          0 |          4 |         40 |
+| src\pages\User\pages                                                                                                             |         17 |      1,468 |         42 |        104 |      1,614 |
+| src\pages\User\pages\Address                                                                                                     |          8 |        851 |         27 |         61 |        939 |
+| src\pages\User\pages\Address (Files)                                                                                             |          1 |         59 |          0 |         10 |         69 |
+| src\pages\User\pages\Address\Components                                                                                          |          7 |        792 |         27 |         51 |        870 |
+| src\pages\User\pages\Address\Components\AddressItem                                                                              |          1 |         95 |          8 |          9 |        112 |
+| src\pages\User\pages\Address\Components\InputChoiceProvinceDistrict                                                              |          2 |        285 |         15 |         13 |        313 |
+| src\pages\User\pages\Address\Components\InputChoiceWard                                                                          |          1 |         58 |          2 |          6 |         66 |
+| src\pages\User\pages\Address\Components\PopupCustomer                                                                            |          3 |        354 |          2 |         23 |        379 |
+| src\pages\User\pages\ChangePassword                                                                                              |          2 |        123 |          0 |          7 |        130 |
+| src\pages\User\pages\DetailPurchase                                                                                              |          2 |        166 |          0 |         10 |        176 |
+| src\pages\User\pages\HistoryPurchase                                                                                             |          3 |        118 |          0 |         12 |        130 |
+| src\pages\User\pages\Profile                                                                                                     |          2 |        210 |         15 |         14 |        239 |
+| src\store                                                                                                                        |          3 |         69 |          0 |         16 |         85 |
+| src\theme                                                                                                                        |          7 |        294 |         29 |         37 |        360 |
+| src\theme (Files)                                                                                                                |          6 |        166 |         20 |         21 |        207 |
+| src\theme\statics                                                                                                                |          1 |        128 |          9 |         16 |        153 |
+| src\types                                                                                                                        |         10 |        353 |          4 |         42 |        399 |
+| src\utils                                                                                                                        |          9 |        494 |         29 |         59 |        582 |
++----------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                         | language           | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| d:\2023_2\DATN\web_page\.env                                                                                                     | Properties         |          3 |          0 |          0 |          3 |
+| d:\2023_2\DATN\web_page\.eslintrc.cjs                                                                                            | JavaScript         |         52 |          9 |          2 |         63 |
+| d:\2023_2\DATN\web_page\.prettierignore                                                                                          | Ignore             |          2 |          0 |          0 |          2 |
+| d:\2023_2\DATN\web_page\.prettierrc                                                                                              | JSON               |         11 |          0 |          0 |         11 |
+| d:\2023_2\DATN\web_page\README.md                                                                                                | Markdown           |          2 |          0 |          1 |          3 |
+| d:\2023_2\DATN\web_page\index.html                                                                                               | HTML               |         13 |          0 |          1 |         14 |
+| d:\2023_2\DATN\web_page\package.json                                                                                             | JSON               |         80 |          0 |          1 |         81 |
+| d:\2023_2\DATN\web_page\postcss.config.js                                                                                        | JavaScript         |          6 |          0 |          1 |          7 |
+| d:\2023_2\DATN\web_page\public\vite.svg                                                                                          | XML                |          1 |          0 |          0 |          1 |
+| d:\2023_2\DATN\web_page\src\App.css                                                                                              | CSS                |         37 |          0 |          9 |         46 |
+| d:\2023_2\DATN\web_page\src\App.tsx                                                                                              | TypeScript JSX     |         29 |          0 |          4 |         33 |
+| d:\2023_2\DATN\web_page\src\api\AddressApiService.ts                                                                             | TypeScript         |         36 |          1 |          5 |         42 |
+| d:\2023_2\DATN\web_page\src\api\Address\districts.json                                                                           | JSON               |        860 |          0 |          1 |        861 |
+| d:\2023_2\DATN\web_page\src\api\Address\province.json                                                                            | JSON               |        380 |          0 |          1 |        381 |
+| d:\2023_2\DATN\web_page\src\api\Address\regions.json                                                                             | JSON               |        814 |          0 |          1 |        815 |
+| d:\2023_2\DATN\web_page\src\api\Address\wards.json                                                                               | JSON               |     92,442 |          0 |          1 |     92,443 |
+| d:\2023_2\DATN\web_page\src\api\address.api.ts                                                                                   | TypeScript         |         19 |          0 |          4 |         23 |
+| d:\2023_2\DATN\web_page\src\api\auth.api.ts                                                                                      | TypeScript         |         23 |          0 |          3 |         26 |
+| d:\2023_2\DATN\web_page\src\api\blog.api.ts                                                                                      | TypeScript         |         24 |          0 |          3 |         27 |
+| d:\2023_2\DATN\web_page\src\api\order.api.ts                                                                                     | TypeScript         |         15 |          0 |          3 |         18 |
+| d:\2023_2\DATN\web_page\src\api\product.api.ts                                                                                   | TypeScript         |         21 |          0 |          3 |         24 |
+| d:\2023_2\DATN\web_page\src\api\promotion.api.ts                                                                                 | TypeScript         |          9 |          0 |          3 |         12 |
+| d:\2023_2\DATN\web_page\src\api\shoppingCart.api.ts                                                                              | TypeScript         |         24 |          0 |          4 |         28 |
+| d:\2023_2\DATN\web_page\src\api\user.api.ts                                                                                      | TypeScript         |         23 |          0 |          4 |         27 |
+| d:\2023_2\DATN\web_page\src\assets\react.svg                                                                                     | XML                |          1 |          0 |          0 |          1 |
+| d:\2023_2\DATN\web_page\src\assets\svg\ArrowDownIcon.tsx                                                                         | TypeScript JSX     |         30 |          1 |          5 |         36 |
+| d:\2023_2\DATN\web_page\src\assets\svg\ArrowDropDownIcon.tsx                                                                     | TypeScript JSX     |         17 |          0 |          4 |         21 |
+| d:\2023_2\DATN\web_page\src\assets\svg\ArrowLeftDoubleIcon.tsx                                                                   | TypeScript JSX     |         20 |          0 |          5 |         25 |
+| d:\2023_2\DATN\web_page\src\assets\svg\ArrowLeftIcon.tsx                                                                         | TypeScript JSX     |         18 |          0 |          5 |         23 |
+| d:\2023_2\DATN\web_page\src\assets\svg\ArrowRightIcon.tsx                                                                        | TypeScript JSX     |         24 |          0 |          5 |         29 |
+| d:\2023_2\DATN\web_page\src\assets\svg\BagCartIcon.tsx                                                                           | TypeScript JSX     |         17 |          0 |          5 |         22 |
+| d:\2023_2\DATN\web_page\src\assets\svg\CartIcon.tsx                                                                              | TypeScript JSX     |         37 |          0 |          2 |         39 |
+| d:\2023_2\DATN\web_page\src\assets\svg\CheckedIcon.tsx                                                                           | TypeScript JSX     |         20 |          0 |          5 |         25 |
+| d:\2023_2\DATN\web_page\src\assets\svg\CloseIcon.tsx                                                                             | TypeScript JSX     |         18 |          0 |          5 |         23 |
+| d:\2023_2\DATN\web_page\src\assets\svg\CommentIcon.tsx                                                                           | TypeScript JSX     |         30 |          0 |          5 |         35 |
+| d:\2023_2\DATN\web_page\src\assets\svg\DiscountIcon.tsx                                                                          | TypeScript JSX     |         12 |          0 |          2 |         14 |
+| d:\2023_2\DATN\web_page\src\assets\svg\EmailIcon.tsx                                                                             | TypeScript JSX     |         31 |          0 |          5 |         36 |
+| d:\2023_2\DATN\web_page\src\assets\svg\EmailSmallIcon.tsx                                                                        | TypeScript JSX     |         26 |          0 |          5 |         31 |
+| d:\2023_2\DATN\web_page\src\assets\svg\FacebookIcon.tsx                                                                          | TypeScript JSX     |         26 |          0 |          5 |         31 |
+| d:\2023_2\DATN\web_page\src\assets\svg\IconImage.tsx                                                                             | TypeScript JSX     |         29 |          0 |          2 |         31 |
+| d:\2023_2\DATN\web_page\src\assets\svg\InstagramIcon.tsx                                                                         | TypeScript JSX     |         34 |          0 |          5 |         39 |
+| d:\2023_2\DATN\web_page\src\assets\svg\LoadingIcon.tsx                                                                           | TypeScript JSX     |         18 |          0 |          5 |         23 |
+| d:\2023_2\DATN\web_page\src\assets\svg\LocationIcon.tsx                                                                          | TypeScript JSX     |         26 |          0 |          5 |         31 |
+| d:\2023_2\DATN\web_page\src\assets\svg\MapsicoIcon.tsx                                                                           | TypeScript JSX     |         27 |          0 |          5 |         32 |
+| d:\2023_2\DATN\web_page\src\assets\svg\MessIcon.tsx                                                                              | TypeScript JSX     |         34 |          0 |          5 |         39 |
+| d:\2023_2\DATN\web_page\src\assets\svg\PhoneIcon.tsx                                                                             | TypeScript JSX     |         26 |          0 |          5 |         31 |
+| d:\2023_2\DATN\web_page\src\assets\svg\SearchIcon.tsx                                                                            | TypeScript JSX     |         15 |          0 |          3 |         18 |
+| d:\2023_2\DATN\web_page\src\assets\svg\SignOutIcon.tsx                                                                           | TypeScript JSX     |         18 |          0 |          5 |         23 |
+| d:\2023_2\DATN\web_page\src\assets\svg\SuccessIcon.tsx                                                                           | TypeScript JSX     |         26 |          0 |          5 |         31 |
+| d:\2023_2\DATN\web_page\src\assets\svg\UnCheckedIcon.tsx                                                                         | TypeScript JSX     |         27 |          0 |          7 |         34 |
+| d:\2023_2\DATN\web_page\src\assets\svg\UserIcon.tsx                                                                              | TypeScript JSX     |         27 |          0 |          5 |         32 |
+| d:\2023_2\DATN\web_page\src\assets\svg\YoutubeIcon.tsx                                                                           | TypeScript JSX     |         26 |          0 |          5 |         31 |
+| d:\2023_2\DATN\web_page\src\assets\user.svg                                                                                      | XML                |          3 |          0 |          1 |          4 |
+| d:\2023_2\DATN\web_page\src\components\Button\Button.stories.tsx                                                                 | TypeScript JSX     |         35 |          0 |          7 |         42 |
+| d:\2023_2\DATN\web_page\src\components\Button\Button.tsx                                                                         | TypeScript JSX     |         31 |          0 |          3 |         34 |
+| d:\2023_2\DATN\web_page\src\components\Button\index.ts                                                                           | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\components\Footer\Footer.style.tsx                                                                   | TypeScript JSX     |         19 |          0 |          3 |         22 |
+| d:\2023_2\DATN\web_page\src\components\Footer\Footer.tsx                                                                         | TypeScript JSX     |        136 |          3 |          6 |        145 |
+| d:\2023_2\DATN\web_page\src\components\Footer\index.ts                                                                           | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\components\Header\Header.style.tsx                                                                   | TypeScript JSX     |         12 |          0 |          3 |         15 |
+| d:\2023_2\DATN\web_page\src\components\Header\Header.tsx                                                                         | TypeScript JSX     |        263 |          1 |         12 |        276 |
+| d:\2023_2\DATN\web_page\src\components\Header\index.ts                                                                           | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\components\InfiniteScroll\InfiniteScroll .tsx                                                        | TypeScript JSX     |         37 |          1 |          7 |         45 |
+| d:\2023_2\DATN\web_page\src\components\InputFile\InputFile.tsx                                                                   | TypeScript JSX     |         44 |          1 |          5 |         50 |
+| d:\2023_2\DATN\web_page\src\components\InputFile\index.ts                                                                        | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\components\InputNumber\InputNumber.tsx                                                               | TypeScript JSX     |         40 |          2 |          5 |         47 |
+| d:\2023_2\DATN\web_page\src\components\InputNumber\index.ts                                                                      | TypeScript         |          3 |          0 |          3 |          6 |
+| d:\2023_2\DATN\web_page\src\components\Input\Input.tsx                                                                           | TypeScript JSX     |         75 |          1 |          7 |         83 |
+| d:\2023_2\DATN\web_page\src\components\Input\index.ts                                                                            | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\components\Popover\Popover.tsx                                                                       | TypeScript JSX     |         76 |          2 |          7 |         85 |
+| d:\2023_2\DATN\web_page\src\components\Popover\index.ts                                                                          | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\components\PosImage\PosImage.style.ts                                                                | TypeScript         |         26 |          4 |          2 |         32 |
+| d:\2023_2\DATN\web_page\src\components\PosImage\PosImage.tsx                                                                     | TypeScript JSX     |         77 |          6 |         10 |         93 |
+| d:\2023_2\DATN\web_page\src\components\PosTypography\PosTypography.style.ts                                                      | TypeScript         |         15 |          1 |          3 |         19 |
+| d:\2023_2\DATN\web_page\src\components\PosTypography\TypographyCus.tsx                                                           | TypeScript JSX     |        109 |          0 |         10 |        119 |
+| d:\2023_2\DATN\web_page\src\components\QuantityController\QuantityController.tsx                                                 | TypeScript JSX     |         94 |          0 |          7 |        101 |
+| d:\2023_2\DATN\web_page\src\components\QuantityController\index.ts                                                               | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\components\RegisterHeader\RegisterHeader.tsx                                                         | TypeScript JSX     |         19 |          0 |          2 |         21 |
+| d:\2023_2\DATN\web_page\src\components\RegisterHeader\index.ts                                                                   | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\components\checkbox copy\PosCheckbox.tsx                                                             | TypeScript JSX     |         22 |          0 |          4 |         26 |
+| d:\2023_2\DATN\web_page\src\components\checkbox\PosCheckbox.tsx                                                                  | TypeScript JSX     |         31 |          0 |          5 |         36 |
+| d:\2023_2\DATN\web_page\src\components\dropdown\Dropdown.tsx                                                                     | TypeScript JSX     |        274 |          7 |         18 |        299 |
+| d:\2023_2\DATN\web_page\src\components\searchSuggest\SearchSuggest.style.tsx                                                     | TypeScript JSX     |        149 |         10 |          4 |        163 |
+| d:\2023_2\DATN\web_page\src\components\searchSuggest\SearchSuggest.tsx                                                           | TypeScript JSX     |        167 |          8 |         15 |        190 |
+| d:\2023_2\DATN\web_page\src\components\textInput\TextInput.style.ts                                                              | TypeScript         |         62 |          0 |          5 |         67 |
+| d:\2023_2\DATN\web_page\src\components\textInput\TextInput.tsx                                                                   | TypeScript JSX     |         60 |          2 |          8 |         70 |
+| d:\2023_2\DATN\web_page\src\constants\config.ts                                                                                  | TypeScript         |          5 |          0 |          2 |          7 |
+| d:\2023_2\DATN\web_page\src\constants\httpStatusCodeEnnum.enum.ts                                                                | TypeScript         |         66 |          0 |          2 |         68 |
+| d:\2023_2\DATN\web_page\src\constants\path.ts                                                                                    | TypeScript         |         16 |          0 |          2 |         18 |
+| d:\2023_2\DATN\web_page\src\contexts\app.context.tsx                                                                             | TypeScript JSX     |         62 |          0 |          8 |         70 |
+| d:\2023_2\DATN\web_page\src\helpers\addressHelper.ts                                                                             | TypeScript         |         39 |          0 |          3 |         42 |
+| d:\2023_2\DATN\web_page\src\helpers\appAuthHelpers.ts                                                                            | TypeScript         |          8 |          0 |          2 |         10 |
+| d:\2023_2\DATN\web_page\src\index.css                                                                                            | CSS                |         11 |          0 |          2 |         13 |
+| d:\2023_2\DATN\web_page\src\layouts\MainLayout\MainLayout.tsx                                                                    | TypeScript JSX     |         16 |          0 |          2 |         18 |
+| d:\2023_2\DATN\web_page\src\layouts\MainLayout\index.ts                                                                          | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\layouts\RegisterLayout\RegisterLayout.tsx                                                            | TypeScript JSX     |         15 |          0 |          2 |         17 |
+| d:\2023_2\DATN\web_page\src\layouts\RegisterLayout\index.ts                                                                      | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\main.tsx                                                                                             | TypeScript JSX     |         24 |          1 |          3 |         28 |
+| d:\2023_2\DATN\web_page\src\pages\Blogs\Blogs.tsx                                                                                | TypeScript JSX     |         42 |          2 |          5 |         49 |
+| d:\2023_2\DATN\web_page\src\pages\Blogs\components\BlogItem.tsx                                                                  | TypeScript JSX     |         62 |          0 |          4 |         66 |
+| d:\2023_2\DATN\web_page\src\pages\Checkout\CheckoutPage.style.tsx                                                                | TypeScript JSX     |        157 |         10 |          5 |        172 |
+| d:\2023_2\DATN\web_page\src\pages\Checkout\CheckoutPage.tsx                                                                      | TypeScript JSX     |        592 |         16 |         44 |        652 |
+| d:\2023_2\DATN\web_page\src\pages\Checkout\CheckoutValidate.tsx                                                                  | TypeScript JSX     |         35 |          0 |          1 |         36 |
+| d:\2023_2\DATN\web_page\src\pages\Checkout\Components\VariantItems\VariantItem.style.tsx                                         | TypeScript JSX     |        170 |          0 |          3 |        173 |
+| d:\2023_2\DATN\web_page\src\pages\Checkout\Components\VariantItems\VariantItem.tsx                                               | TypeScript JSX     |         47 |          0 |          4 |         51 |
+| d:\2023_2\DATN\web_page\src\pages\Checkout\Components\dropdownSearchOption\DropdownSearchOption.style.tsx                        | TypeScript JSX     |        156 |         14 |          3 |        173 |
+| d:\2023_2\DATN\web_page\src\pages\Checkout\Components\dropdownSearchOption\DropdownSearchOption.tsx                              | TypeScript JSX     |        199 |         12 |         11 |        222 |
+| d:\2023_2\DATN\web_page\src\pages\Components\ItemProduct\ItemProduct.style.tsx                                                   | TypeScript JSX     |        153 |         15 |          4 |        172 |
+| d:\2023_2\DATN\web_page\src\pages\Components\ItemProduct\ItemProduct.tsx                                                         | TypeScript JSX     |        162 |          2 |         14 |        178 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\HomePage.tsx                                                                          | TypeScript JSX     |        236 |         12 |         22 |        270 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\Homepage.style.tsx                                                                    | TypeScript JSX     |         11 |          0 |          2 |         13 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\components\DialogCart\CartDialog.style.tsx                                            | TypeScript JSX     |         35 |          0 |          2 |         37 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\components\DialogCart\CartDialog.tsx                                                  | TypeScript JSX     |        365 |          0 |         17 |        382 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\components\ListSlideProducts\ListSlideProducts.tsx                                    | TypeScript JSX     |         68 |          5 |          6 |         79 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\components\ListSlideProducts\style.scss                                               | SCSS               |         69 |          0 |         11 |         80 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\components\OutstandingBrand\OutstandingBrand.tsx                                      | TypeScript JSX     |        108 |          5 |          6 |        119 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\components\OutstandingBrand\style.scss                                                | SCSS               |         82 |          4 |         16 |        102 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\components\SectionReview\Components\ItemReview.style.tsx                              | TypeScript JSX     |          9 |          0 |          2 |         11 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\components\SectionReview\Components\ItemReview.tsx                                    | TypeScript JSX     |         36 |          0 |          5 |         41 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\components\SectionReview\SectionReview.tsx                                            | TypeScript JSX     |        100 |          5 |          7 |        112 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\components\SectionReview\style.scss                                                   | SCSS               |         92 |          4 |         16 |        112 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\hocs\modal\ModalProvider.tsx                                                          | TypeScript JSX     |         72 |          1 |         14 |         87 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\hocs\modal\ModalStack.tsx                                                             | TypeScript JSX     |         13 |          0 |          4 |         17 |
+| d:\2023_2\DATN\web_page\src\pages\HomePage\hocs\modal\useModal.ts                                                                | TypeScript         |          6 |          0 |          4 |         10 |
+| d:\2023_2\DATN\web_page\src\pages\Login\Login.tsx                                                                                | TypeScript JSX     |         99 |          4 |          7 |        110 |
+| d:\2023_2\DATN\web_page\src\pages\ProductDetail\ProductDetail.style.tsx                                                          | TypeScript JSX     |        104 |          4 |          4 |        112 |
+| d:\2023_2\DATN\web_page\src\pages\ProductDetail\ProductDetail.tsx                                                                | TypeScript JSX     |        373 |         11 |         21 |        405 |
+| d:\2023_2\DATN\web_page\src\pages\Products\Product.style.tsx                                                                     | TypeScript JSX     |        112 |          3 |          4 |        119 |
+| d:\2023_2\DATN\web_page\src\pages\Products\Products.tsx                                                                          | TypeScript JSX     |        213 |          2 |          7 |        222 |
+| d:\2023_2\DATN\web_page\src\pages\Products\hocs\useProductFilter.tsx                                                             | TypeScript JSX     |         92 |          3 |         12 |        107 |
+| d:\2023_2\DATN\web_page\src\pages\Register\Register.tsx                                                                          | TypeScript JSX     |        134 |         15 |         10 |        159 |
+| d:\2023_2\DATN\web_page\src\pages\ShoppingCart\ShoppingCart.tsx                                                                  | TypeScript JSX     |        343 |          1 |         14 |        358 |
+| d:\2023_2\DATN\web_page\src\pages\ShoppingCart\index.ts                                                                          | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\pages\User\components\DateSelect\DateSelect.tsx                                                      | TypeScript JSX     |         83 |          0 |          5 |         88 |
+| d:\2023_2\DATN\web_page\src\pages\User\components\DateSelect\index.ts                                                            | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\pages\User\components\UserSideNav\UserSideNav.tsx                                                    | TypeScript JSX     |         95 |          0 |          3 |         98 |
+| d:\2023_2\DATN\web_page\src\pages\User\components\UserSideNav\index.ts                                                           | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\pages\User\layouts\UserLayout\UserLayout.tsx                                                         | TypeScript JSX     |         34 |          0 |          2 |         36 |
+| d:\2023_2\DATN\web_page\src\pages\User\layouts\UserLayout\index.ts                                                               | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Address.tsx                                                                 | TypeScript JSX     |         59 |          0 |         10 |         69 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\AddressItem\AddressItem.tsx                                      | TypeScript JSX     |         95 |          8 |          9 |        112 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\InputChoiceProvinceDistrict\InputChoiceProvinceDistrict.style.ts | TypeScript         |        112 |         11 |          2 |        125 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\InputChoiceProvinceDistrict\InputChoiceProvinceDistrict.tsx      | TypeScript JSX     |        173 |          4 |         11 |        188 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\InputChoiceWard\InputChoiceWard.tsx                              | TypeScript JSX     |         58 |          2 |          6 |         66 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\PopupCustomer\CustomerValidate.ts                                | TypeScript         |         35 |          0 |          2 |         37 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\PopupCustomer\PopupAddress.style.ts                              | TypeScript         |         41 |          0 |          2 |         43 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\Address\Components\PopupCustomer\PopupAddress.tsx                                   | TypeScript JSX     |        278 |          2 |         19 |        299 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\ChangePassword\ChangePassword.tsx                                                   | TypeScript JSX     |        121 |          0 |          5 |        126 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\ChangePassword\index.ts                                                             | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\DetailPurchase\DetailPurchase.style.tsx                                             | TypeScript JSX     |         39 |          0 |          3 |         42 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\DetailPurchase\DetailPurchase.tsx                                                   | TypeScript JSX     |        127 |          0 |          7 |        134 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\HistoryPurchase\HistoryPurchase.style.tsx                                           | TypeScript JSX     |         20 |          0 |          3 |         23 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\HistoryPurchase\HistoryPurchase.tsx                                                 | TypeScript JSX     |         96 |          0 |          7 |        103 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\HistoryPurchase\index.ts                                                            | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\Profile\Profile.tsx                                                                 | TypeScript JSX     |        208 |         15 |         12 |        235 |
+| d:\2023_2\DATN\web_page\src\pages\User\pages\Profile\index.ts                                                                    | TypeScript         |          2 |          0 |          2 |          4 |
+| d:\2023_2\DATN\web_page\src\responsive.css                                                                                       | CSS                |          0 |          0 |          2 |          2 |
+| d:\2023_2\DATN\web_page\src\store\index.ts                                                                                       | TypeScript         |          1 |          0 |          1 |          2 |
+| d:\2023_2\DATN\web_page\src\store\store.ts                                                                                       | TypeScript         |         46 |          0 |         11 |         57 |
+| d:\2023_2\DATN\web_page\src\store\types.ts                                                                                       | TypeScript         |         22 |          0 |          4 |         26 |
+| d:\2023_2\DATN\web_page\src\theme\index.ts                                                                                       | TypeScript         |         12 |         19 |          4 |         35 |
+| d:\2023_2\DATN\web_page\src\theme\material-ui.d.ts                                                                               | TypeScript         |         84 |          0 |          6 |         90 |
+| d:\2023_2\DATN\web_page\src\theme\slice.ts                                                                                       | TypeScript         |         19 |          0 |          5 |         24 |
+| d:\2023_2\DATN\web_page\src\theme\statics\colors.ts                                                                              | TypeScript         |        128 |          9 |         16 |        153 |
+| d:\2023_2\DATN\web_page\src\theme\themes.ts                                                                                      | TypeScript         |         40 |          1 |          2 |         43 |
+| d:\2023_2\DATN\web_page\src\theme\types.ts                                                                                       | TypeScript         |          7 |          0 |          3 |         10 |
+| d:\2023_2\DATN\web_page\src\theme\typography.ts                                                                                  | TypeScript         |          4 |          0 |          1 |          5 |
+| d:\2023_2\DATN\web_page\src\types\AddressModels.type.ts                                                                          | TypeScript         |         39 |          0 |          1 |         40 |
+| d:\2023_2\DATN\web_page\src\types\Order.type.ts                                                                                  | TypeScript         |         82 |          0 |         10 |         92 |
+| d:\2023_2\DATN\web_page\src\types\auth.type.ts                                                                                   | TypeScript         |         10 |          0 |          3 |         13 |
+| d:\2023_2\DATN\web_page\src\types\blog.type.ts                                                                                   | TypeScript         |         27 |          0 |          4 |         31 |
+| d:\2023_2\DATN\web_page\src\types\product.type.ts                                                                                | TypeScript         |         63 |          0 |          7 |         70 |
+| d:\2023_2\DATN\web_page\src\types\promotion.type.ts                                                                              | TypeScript         |         12 |          0 |          2 |         14 |
+| d:\2023_2\DATN\web_page\src\types\purchase.type.ts                                                                               | TypeScript         |         13 |          0 |          5 |         18 |
+| d:\2023_2\DATN\web_page\src\types\role.type.ts                                                                                   | TypeScript         |          6 |          0 |          1 |          7 |
+| d:\2023_2\DATN\web_page\src\types\user.type.ts                                                                                   | TypeScript         |         84 |          3 |          6 |         93 |
+| d:\2023_2\DATN\web_page\src\types\utils.type.ts                                                                                  | TypeScript         |         17 |          1 |          3 |         21 |
+| d:\2023_2\DATN\web_page\src\useRouteElements.tsx                                                                                 | TypeScript JSX     |        136 |         38 |          6 |        180 |
+| d:\2023_2\DATN\web_page\src\utils\DefaultLoadingIcon.tsx                                                                         | TypeScript JSX     |         17 |          0 |          4 |         21 |
+| d:\2023_2\DATN\web_page\src\utils\REGEX.ts                                                                                       | TypeScript         |          2 |          2 |          1 |          5 |
+| d:\2023_2\DATN\web_page\src\utils\auth.ts                                                                                        | TypeScript         |         24 |          0 |          9 |         33 |
+| d:\2023_2\DATN\web_page\src\utils\customerHelpers.ts                                                                             | TypeScript         |         72 |          0 |          5 |         77 |
+| d:\2023_2\DATN\web_page\src\utils\http.ts                                                                                        | TypeScript         |        116 |         24 |          7 |        147 |
+| d:\2023_2\DATN\web_page\src\utils\numberUtils.ts                                                                                 | TypeScript         |          6 |          0 |          1 |          7 |
+| d:\2023_2\DATN\web_page\src\utils\priceUtils.ts                                                                                  | TypeScript         |         93 |          0 |          8 |        101 |
+| d:\2023_2\DATN\web_page\src\utils\rules.ts                                                                                       | TypeScript         |        117 |          1 |         10 |        128 |
+| d:\2023_2\DATN\web_page\src\utils\utils.ts                                                                                       | TypeScript         |         47 |          2 |         14 |         63 |
+| d:\2023_2\DATN\web_page\src\vite-env.d.ts                                                                                        | TypeScript         |          0 |          1 |          1 |          2 |
+| d:\2023_2\DATN\web_page\tailwind.config.js                                                                                       | JavaScript         |         11 |          1 |          1 |         13 |
+| d:\2023_2\DATN\web_page\tsconfig.json                                                                                            | JSON with Comments |         22 |          2 |          3 |         27 |
+| d:\2023_2\DATN\web_page\tsconfig.node.json                                                                                       | JSON               |         10 |          0 |          1 |         11 |
+| d:\2023_2\DATN\web_page\vite.config.ts                                                                                           | TypeScript         |         48 |          6 |          6 |         60 |
+| Total                                                                                                                            |                    |    105,419 |        363 |        997 |    106,779 |
++----------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

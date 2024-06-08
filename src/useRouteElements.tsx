@@ -78,6 +78,19 @@ export default function useRouteElements() {
           path: '/account/sign-in',
           element: <Register></Register>
         }
+        // {
+        //   index: true,
+        //   path: '/home',
+        //   element: <HomePage />
+        // },
+        // {
+        //   path: '/products',
+        //   element: <Products />
+        // },
+        // {
+        //   path: '/blogs',
+        //   element: <Blogs />
+        // }
       ]
     },
     {

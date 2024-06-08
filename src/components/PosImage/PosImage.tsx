@@ -68,12 +68,12 @@ const PosImage = (props: PosImageProps) => {
               placement='right'
               transition
               disablePortal
-              modifiers={{
-                offset: {
-                  enabled: true,
-                  offset: '0, 20px'
-                }
-              }}
+              // modifiers={{
+              //   offset: {
+              //     enabled: true,
+              //     offset: '0, 20px'
+              //   }
+              // }}
             >
               {({ TransitionProps }) => (
                 <Fade {...TransitionProps} timeout={350}>
